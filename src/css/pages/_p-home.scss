@@ -1,0 +1,70 @@
+/*Home styles*/
+
+.p-home {
+    position: relative;
+
+    &__art {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 50%;
+
+        background: url('../img/img-arte-escritorio.png') no-repeat bottom right;
+        background-size: cover;
+
+        @include media(">=tablet") {
+            width: 40%;
+            min-width: 400px;
+        }
+    }
+
+    &__intro {
+        position: relative;
+        z-index: 10;
+
+        width: 60%;
+        height: 100%;
+
+        text-align: center;
+
+        @include media(">=desktop") {
+            width: calc(100% - 400px);
+        }
+
+        &-inner {
+            display: inline-block;
+            text-align: left;
+        }
+
+        &-text {
+            margin: 0;
+
+            line-height: 1.5;
+            font-size: 1.1rem;
+        }
+
+        &-copyfig {
+            max-width: 320px;
+        }
+    }
+
+    &__list {
+        display: none;
+        padding-left: 1rem;
+        margin-top: 1rem;
+        list-style: disc;
+
+        @include media(">=tablet") {
+            display: block;
+        }
+
+        &-item {
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    .c-button {
+        margin-top: 1rem;
+    }
+}

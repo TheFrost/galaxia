@@ -1,0 +1,25 @@
+/*Main styles catalog*/
+
+/*Libs*/
+@import '../../node_modules/include-media/dist/include-media';
+
+/*Tools*/
+@import 'tools/mixins';
+@import 'tools/settings';
+@import 'tools/utils';
+@import 'tools/fonts';
+
+/*Base*/
+@import 'base';
+
+/*Components*/
+@import 'components/c-button';
+@import 'components/c-modal';
+@import 'components/c-presentation';
+
+/*Layout*/
+@import 'layout/l-section';
+@import 'layout/l-sidenav';
+@import 'layout/l-header';
+/*Pages*/
+@import 'pages/p-home';

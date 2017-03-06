@@ -1,0 +1,41 @@
+.l-section {
+    @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}) {
+            .l-section__inner {
+                background: url('../img/img-#{$i}.jpg') no-repeat center center;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__inner {
+        padding-top: 143px;
+        padding-right: 1rem;
+        height: $section_base_height;
+        
+        visibility: visible;
+        backface-visibility: hidden;
+
+        @include media(">=tablet") {
+            padding-top: 175px;
+        }
+
+        @include media(">=desktop") {
+            padding-top: 0;
+        }
+    }
+
+    &__safe-area {
+        width: 100%;
+        height: calc(100vh - 143px);
+
+        @include media(">=tablet") {
+            height: calc(100vh - 175px);
+        }
+
+        @include media(">=desktop") {
+            width: calc(100% - 250px);
+            height: $section_base_height;
+        }
+    }
+}

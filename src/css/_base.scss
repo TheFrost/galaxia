@@ -1,0 +1,75 @@
+/*Base settings styles*/
+html, body {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    font-size: $base_size;
+    font-family: $base_font;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: white;
+    background: url('../img/img-1.jpg') no-repeat center center;
+    background-size: cover;
+
+    -webkit-overflow-scrolling : touch !important;
+    overflow: auto;
+
+    @include media(">desktop") {
+        overflow: hidden;
+    }
+
+    &::before {
+        content: 'mobile';
+        display: none;
+
+        @include media(">desktop") {
+            content: 'desktop';
+        }
+    }
+
+    &[data-hijacking="on"] {
+        .cd-section {
+            @include media(">desktop") {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+
+            &.visible {
+                z-index: 10;
+            }
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+figure {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    font-size: 1rem;
+    font-family: $base_font;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: currentColor;
+}
+
+input, button {
+    outline: none;
+}

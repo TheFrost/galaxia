@@ -1,0 +1,49 @@
+/*Utils*/
+
+.u-imgresponsive {
+    max-width: 100%;
+    display: block;
+}
+
+.u-listnostyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.u-pull-right {
+    float: right;
+}
+
+.u-pull-left {
+    float: left;
+}
+
+.u-clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.u-table {
+    display: table;
+}
+
+.u-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.u-fullheight {
+    height: 100%;
+}
+
+.u-align-center {
+    text-align: center;
+}
+
+.u-align-right {
+    text-align: right;
+}

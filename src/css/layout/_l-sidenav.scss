@@ -1,0 +1,46 @@
+/*Sidenav styles*/
+.l-sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: none;
+    width: 100%;
+    max-width: 250px;
+    padding: 2rem;
+    height: $section_base_height + 50vh;
+
+    text-align: center;
+
+    background-color: rgba(black, 0.5);
+
+    @include media(">=desktop") {
+        display: block;
+    }
+
+    &__brand {
+        display: inline-block;
+        margin-bottom: 2rem;
+    }
+
+    &__menu {
+        text-align: left;
+
+        &-link {
+            display: block;
+            padding: 0.7rem 0;
+
+            color: white;
+
+            &:hover {
+                color: $base_color_beta;
+            }
+
+            &.js-active {
+                color: $base_color_beta;
+                text-decoration: line-through;
+            }
+        }
+    }
+}

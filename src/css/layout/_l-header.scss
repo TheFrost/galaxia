@@ -1,0 +1,186 @@
+/*Header styles mobile*/
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+
+  width: 100%;
+  padding: 1rem 1rem 2rem;
+
+  background-color: rgba(black, 0.5);
+
+  @include media(">=tablet") {
+    padding: 1rem 2rem 2rem;
+  }
+
+  @include media(">=desktop") {
+    padding: 2rem;
+
+    background-color: transparent;
+  }
+
+  &__info {
+    width: 100%;
+
+    @include media(">=tablet") {
+      width: auto;
+    }
+
+    &-profile {
+      padding-top: 11px;
+      margin-right: 1rem;
+    }
+  }
+
+  &__user {
+
+    &-name {
+      color: currentColor;
+    }
+
+    &-shape {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+  }
+
+  &__login {
+    font-size: $second_size;
+
+    color: currentColor;
+
+    @include media(">=tablet") {
+      font-size: $base_size;
+    }
+  }
+
+  &__codeform {
+    &-group {
+      position: relative;
+
+      display: inline-block;
+      padding-right: 2rem;
+
+      border: 1px solid rgba($base_color_alpha, 0.85);
+      background: rgba(black, 0.5);
+    }
+
+    &-message {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+
+      font-size: $second_size;
+
+      color: $base_color_gamma;
+    }
+
+    input {
+      width: 150px;
+      padding: 0.6rem 0.5rem;
+
+      font-size: 0.9rem;
+
+      border: none;
+      background: none;
+      color: $base_color_gamma;
+
+      @include media(">=tablet") {
+        width: 200px;
+        padding: 0.6rem 1rem;
+
+        font-size: $base_size;
+      }
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $base_color_gamma;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $base_color_gamma;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $base_color_gamma;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $base_color_gamma;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 2.5rem;
+      height: 100%;
+
+      background-color: rgba($base_color_alpha, 0.5);
+      border: none;
+
+      cursor: pointer;
+
+      @include media(">=tablet") {
+        width: 2.5rem;
+      }
+    }
+  }
+
+  /*mobile brand styles*/
+  &__brand {
+    width: 100%;
+
+    @include media(">=desktop") {
+      display: none;
+    }
+
+    &-item {
+      img {
+        display: inline-block;
+        max-width: 200px;
+        max-height: 50px;
+
+        @include media(">=tablet") {
+          max-height: 80px;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    &-trigger {
+      position: relative;
+
+      display: inline-block;
+      width: 40px;
+      height: 30px;
+
+      span {
+        position: absolute;
+        left: 0;
+
+        display: block;
+        height: 1px;
+        width: 100%;
+
+        background-color: $base_color_beta;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 50%;
+        }
+
+        &:nth-child(3) {
+        bottom: 0;
+        }
+      }
+    }
+  }
+
+  .u-table-cell {
+    width: calc(100% / 3);
+  }
+}

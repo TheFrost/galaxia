@@ -1,0 +1,37 @@
+/*Button style*/
+.c-button {
+    position: relative;
+
+    display: inline-block;
+    padding: 0.3rem 2.5rem 0.3rem 0.5rem;
+
+    border-bottom: 1px solid currentColor;
+
+    &:after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 2rem;
+        height: calc(100% - 3px);
+
+        border-bottom: 3px solid currentColor;
+    }
+
+    &--beta {
+        color: $base_color_beta;
+        background-color: rgba($base_color_beta, 0.3);  
+    }
+
+    &--alpha {
+        color: $base_color_alpha;
+        background-color: rgba($base_color_alpha, 0.3);  
+    }
+
+    &--epsilon {
+        color: $base_color_delta;
+        background-color: rgba($base_color_epsilon, 0.85);  
+    }
+}
