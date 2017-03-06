@@ -133,6 +133,13 @@ input, button {
     background-color: rgba(50, 29, 90, 0.85); }
 
 /*Modal styles*/
+.c-modal {
+  background-color: rgba(218, 85, 150, 0.4); }
+
+/*Remodal reset styles*/
+.remodal-overlay {
+  background-color: rgba(127, 52, 148, 0.9); }
+
 /*Presentation styles*/
 .c-presentation {
   text-align: center;

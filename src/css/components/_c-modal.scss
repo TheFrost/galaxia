@@ -1,1 +1,10 @@
 /*Modal styles*/
+.c-modal {
+  background-color: rgba($base_color_alpha, 0.4);
+}
+
+
+/*Remodal reset styles*/
+.remodal-overlay {
+  background-color: rgba($base_color_delta, 0.9);
+}

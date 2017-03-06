@@ -10,6 +10,11 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+        <!-- Libs -->
+        <link rel="stylesheet" href="libs/remodal/dist/remodal.css">
+        <link rel="stylesheet" href="libs/remodal/dist/remodal-default-theme.css">
+
+        <!-- Custom -->
         <link rel="stylesheet" href="css/main.css">
 
         <script src="libs/modernizr/modernizr.js"></script>
@@ -20,6 +25,87 @@
         <![endif]-->
         
         <!-- Layout -->
+
+        <!-- Sidenav -->
+        <nav class="l-sidenav">
+            <header class="l-sidenav__head">
+                <figure class="l-sidenav__brand">
+                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
+                </figure>
+                <figure class="l-sidenav__brand">
+                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
+                </figure>
+            </header>
+
+            <ul class="l-sidenav__menu u-listnostyle">
+                <li class="l-sidenav__menu-item">
+                    <a href="#" class="l-sidenav__menu-link">Inicio</a>
+                </li>
+                <li class="l-sidenav__menu-item">
+                    <a href="#" class="l-sidenav__menu-link">Recompensas</a>
+                </li>
+                <li class="l-sidenav__menu-item">
+                    <a href="#" class="l-sidenav__menu-link">Misión</a>
+                </li>
+                <li class="l-sidenav__menu-item">
+                    <a href="#" class="l-sidenav__menu-link">Ranking/Ganadores</a>
+                </li>
+                <li class="l-sidenav__menu-item">
+                    <a href="#" class="l-sidenav__menu-link">Copyright</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- // end sidenav -->
+
+        <!-- Header -->
+        <header class="l-header u-clearfix">
+            <section class="l-header__brand u-table">
+                <figure class="l-header__brand-item u-table-cell">
+                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
+                </figure>
+                <figure class="l-header__brand-item u-table-cell u-align-center">
+                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
+                </figure>
+                <div class="l-header__menu u-table-cell u-align-right">
+                    <a href="#" class="l-header__menu-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="l-header__info u-clearfix u-pull-right">
+                <div class="l-header__info-profile u-pull-left">
+                    <!-- User profile info -->
+                    <!--<div class="l-header__user u-pull-left">
+                        <a href="#" class="l-header__user-name">
+                            <span>AB</span>
+                            <span class="l-header__user-shape">|</span>
+                            <span>3455 PTS</span>
+                        </a>
+                    </div>-->
+                    <!-- // end User profile info -->
+
+                    <!-- Login action -->
+                    <a href="#" data-remodal-target="modal" class="l-header__login">Iniciar sesión</a>
+                    <!-- // end Login action -->
+                </div>
+
+                <form action="" class="l-header__codeform u-pull-right">
+                    <div class="l-header__codeform-group">
+                        <input type="text" placeholder="Ingresar Código">
+                        <button type="submit"></button>
+                        <span class="l-header__codeform-message">Código incorrecto</span>
+                    </div>
+                </form>
+            </section>
+        </header>
+        <!-- // end Header -->
+
+        <!-- Scroll indicator -->
+
+        <!-- // end Scroll indicator -->
 
         <!-- Content -->
         <section class="l-section u-clearfix cd-section visible">
@@ -84,88 +170,21 @@
         </section>
         <!-- // end Content -->
 
-        <!-- Sidenav -->
-        <nav class="l-sidenav">
-            <header class="l-sidenav__head">
-                <figure class="l-sidenav__brand">
-                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
-                </figure>
-                <figure class="l-sidenav__brand">
-                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
-                </figure>
-            </header>
-
-            <ul class="l-sidenav__menu u-listnostyle">
-                <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Inicio</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Recompensas</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Misión</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Ranking/Ganadores</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Copyright</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- // end sidenav -->
-
-        <!-- Header -->
-        <header class="l-header u-clearfix">
-            <section class="l-header__brand u-table">
-                <figure class="l-header__brand-item u-table-cell">
-                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
-                </figure>
-                <figure class="l-header__brand-item u-table-cell u-align-center">
-                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
-                </figure>
-                <div class="l-header__menu u-table-cell u-align-right">
-                    <a href="#" class="l-header__menu-trigger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
-            </section>
-
-            <section class="l-header__info u-clearfix u-pull-right">
-                <div class="l-header__info-profile u-pull-left">
-                    <!-- User profile info -->
-                    <div class="l-header__user u-pull-left">
-                        <a href="#" class="l-header__user-name">
-                            <span>AB</span>
-                            <span class="l-header__user-shape">|</span>
-                            <span>3455 PTS</span>
-                        </a>
-                    </div>
-                    <!-- // end User profile info -->
-
-                    <!-- Login action -->
-                    <!--<a href="#" class="l-header__login">Iniciar sesión</a>-->
-                    <!-- // end Login action -->
-                </div>
-
-                <form action="" class="l-header__codeform u-pull-right">
-                    <div class="l-header__codeform-group">
-                        <input type="text" placeholder="Ingresar Código">
-                        <button type="submit"></button>
-                        <span class="l-header__codeform-message">Código incorrecto</span>
-                    </div>
-                </form>
-            </section>
-        </header>
-        <!-- // end Header -->
-
-        <!-- Scroll indicator -->
-
-        <!-- // end Scroll indicator -->
-
         <!-- // end Layout -->
+
+
+        <!-- Modals -->
+        <div class="c-modal remodal" data-remodal-id="modal">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <h1>Remodal</h1>
+            <p>
+                Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+            </p>
+            <br>
+            <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+            <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+        </div>
+        <!-- // end Modals -->
 
 
         <!-- Libs -->
@@ -173,6 +192,7 @@
         <script src="libs/velocity/velocity.min.js"></script>
         <script src="libs/velocity/velocity.ui.min.js"></script>
         <script src="libs/page-scroll/page-scroll.js"></script>
+        <script src="libs/remodal/dist/remodal.min.js"></script>
 
         <!-- Custom -->
         <script src="js/main.js"></script>
