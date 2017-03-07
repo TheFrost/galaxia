@@ -176,7 +176,7 @@
 
 
         <!-- Modal login -->
-        <div class="c-modal c-modal--login remodal" data-remodal-id="login">
+        <div class="c-modal c-modal--small c-modal--login remodal" data-remodal-id="login">
             <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
             <h1 class="c-modal__head">Identifícate</h1>
             <a href="#" class="c-modal__social">Ingresar con facebook</a>
@@ -194,7 +194,7 @@
 
                     <p class="c-form__message c-form__message--error">Usuario o contraseña incorrectos</p>
                 </div>
-                <a href="#" class="c-form__forgot">¿Olvidaste tu contraseña?</a>
+                <a href="#resetpass" class="c-form__forgot">¿Olvidaste tu contraseña?</a>
                 <button type="submit" class="c-button c-button--beta">Iniciar sesión</button>
             </form>
             <hr>
@@ -203,8 +203,25 @@
         </div>
         <!-- // end Modal login -->
 
+        <!-- Modal forgot password -->
+        <div class="c-modal c-modal--small remodal" data-remodal-id="resetpass">
+            <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
+            <h1 class="c-modal__head">Recupera tu contraseña</h1>
+            <p class="c-modal__text">Por favor, confirma tu correo electrónico para ayudarte a configurar tu contraseña.</p>
+            <form action="" class="c-form">
+                <div class="c-form__group u-clearfix">
+                    <div class="c-form__input">
+                        <input type="email" name="email">
+                        <label for="email">Correo electrónico</label>
+                    </div>
+                </div>
+                <button type="submit" class="c-button c-button--beta">Comprobar</button>
+            </form>
+        </div>
+        <!-- // end Modal forgot password -->
+
         <!-- Modal Code -->
-        <div class="c-modal c-modal--code remodal" data-remodal-id="code">
+        <div class="c-modal c-modal--small c-modal--code remodal" data-remodal-id="code">
             <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
             <h1 class="c-modal__head">Código válido</h1>
             <p class="c-modal__points-copy">Obtuviste XXX puntos</p>

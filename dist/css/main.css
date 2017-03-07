@@ -144,9 +144,9 @@ button.c-button {
   @media (min-width: 768px) {
     .c-modal {
       padding: 35px; } }
-  .c-modal--login, .c-modal--code {
+  .c-modal--small {
     max-width: 500px; }
-    .c-modal--login .c-form, .c-modal--code .c-form {
+    .c-modal--small .c-form {
       max-width: 300px; }
   .c-modal--code .c-modal__points-copy {
     margin: 2rem 0;
