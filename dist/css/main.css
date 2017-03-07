@@ -161,7 +161,7 @@ button.c-button {
     position: relative;
     display: block;
     width: 100%;
-    max-width: 213px;
+    max-width: 220px;
     padding: 0.4rem 0.5rem 0.3rem 2.5rem;
     margin: 0 auto 1rem;
     font-size: 0.8rem;
@@ -202,15 +202,18 @@ button.c-button {
 .c-form {
   width: 100%;
   margin: 1rem auto; }
-  .c-form__group {
-    margin-bottom: 2rem; }
+  @media (min-width: 768px) {
     .c-form__group--doble .c-form__input {
       float: left;
-      width: calc(50% - 0.5rem); }
-      .c-form__group--doble .c-form__input:first-child {
-        margin-right: 1rem; }
+      width: calc(50% - 0.5rem); } }
+  @media (min-width: 768px) {
+    .c-form__group--doble .c-form__input:first-child {
+      margin-right: 1rem; } }
   .c-form__input {
-    position: relative; }
+    position: relative;
+    margin-bottom: 1rem;
+    -webkit-transition: all 0.33s ease-in-out;
+    transition: all 0.33s ease-in-out; }
     .c-form__input:before, .c-form__input:after {
       content: '';
       position: absolute;
@@ -226,13 +229,15 @@ button.c-button {
     .c-form__input:after {
       right: 0;
       border-left: none; }
-    .c-form__input.js-dirty:after, .c-form__input.js-dirty:before, .c-form__input.js-focus:after, .c-form__input.js-focus:before {
-      width: 40%; }
-    .c-form__input.js-dirty input, .c-form__input.js-focus input {
-      background: none; }
-    .c-form__input.js-dirty label, .c-form__input.js-focus label {
-      -webkit-transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1);
-              transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1); }
+    .c-form__input.js-dirty, .c-form__input.js-focus {
+      margin-bottom: 2rem; }
+      .c-form__input.js-dirty:after, .c-form__input.js-dirty:before, .c-form__input.js-focus:after, .c-form__input.js-focus:before {
+        width: calc(50% - 1rem); }
+      .c-form__input.js-dirty input, .c-form__input.js-focus input {
+        background: none; }
+      .c-form__input.js-dirty label, .c-form__input.js-focus label {
+        -webkit-transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1);
+                transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1); }
     .c-form__input input {
       position: relative;
       z-index: 20;
@@ -249,6 +254,7 @@ button.c-button {
       top: 4px;
       left: 50%;
       z-index: 10;
+      width: 100%;
       color: #F8961D;
       -webkit-transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
               transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
@@ -260,6 +266,69 @@ button.c-button {
     font-size: 0.8rem;
     text-decoration: underline;
     color: white; }
+  .c-form__conditions {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem; }
+  .c-form__legals {
+    display: inline-block;
+    margin-bottom: 1rem; }
+  .c-form__legals, .c-form__captcha {
+    vertical-align: top; }
+    @media (min-width: 768px) {
+      .c-form__legals, .c-form__captcha {
+        display: table-cell; } }
+  @media (min-width: 768px) {
+    .c-form__captcha {
+      text-align: right; } }
+  .c-form__legals {
+    text-align: left; }
+  .c-form__checkbox {
+    margin-bottom: 0.5rem;
+    /* Base for label styling */
+    /* checkbox aspect */
+    /* checked mark aspect */
+    /* checked mark aspect changes */ }
+    .c-form__checkbox label {
+      color: #F8961D; }
+    .c-form__checkbox [type="checkbox"]:not(:checked),
+    .c-form__checkbox [type="checkbox"]:checked {
+      position: absolute;
+      left: -9999px; }
+    .c-form__checkbox [type="checkbox"]:not(:checked) + label,
+    .c-form__checkbox [type="checkbox"]:checked + label {
+      position: relative;
+      padding-left: 1.95em;
+      cursor: pointer; }
+    .c-form__checkbox [type="checkbox"]:not(:checked) + label:before,
+    .c-form__checkbox [type="checkbox"]:checked + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.2rem;
+      width: 1rem;
+      height: 1rem;
+      background: rgba(248, 150, 29, 0.2); }
+    .c-form__checkbox [type="checkbox"]:not(:checked) + label:after,
+    .c-form__checkbox [type="checkbox"]:checked + label:after {
+      content: '\f00c';
+      position: absolute;
+      top: .4rem;
+      left: .1rem;
+      font-size: 0.8rem;
+      font-family: FontAwesome;
+      line-height: 0.8;
+      color: #F8961D;
+      -webkit-transition: all .2s;
+      transition: all .2s; }
+    .c-form__checkbox [type="checkbox"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0); }
+    .c-form__checkbox [type="checkbox"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1); }
 
 /*Layout*/
 .l-section:nth-of-type(1) .l-section__inner {

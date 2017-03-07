@@ -4,15 +4,17 @@
   margin: 1rem auto;
 
   &__group {
-    margin-bottom: 2rem;
-
     &--doble {
       .c-form__input {
-        float: left;
-        width: calc(50% - 0.5rem);
+        @include media(">=tablet") {
+          float: left;
+          width: calc(50% - 0.5rem);
+        }
 
         &:first-child {
-          margin-right: 1rem;
+          @include media(">=tablet") {
+            margin-right: 1rem;
+          }
         }
       }
     }
@@ -20,6 +22,9 @@
 
   &__input {
     position: relative;
+
+    margin-bottom: 1rem;
+    transition: all 0.33s ease-in-out;
 
     &:before, &:after {
       content: '';
@@ -48,9 +53,11 @@
 
     &.js-dirty,
     &.js-focus {
+      margin-bottom: 2rem;
+
       &:after,
       &:before {
-        width: 40%;
+        width: calc(50% - 1rem);
       }
 
       input {
@@ -84,6 +91,8 @@
       left: 50%;
       z-index: 10;
 
+      width: 100%;
+
       color: $base_color_beta;
 
       transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
@@ -100,4 +109,88 @@
 
     color: white;
   }
+
+  &__conditions {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__legals {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &__legals,
+  &__captcha {
+    vertical-align: top;
+
+    @include media(">=tablet") {
+      display: table-cell;
+    }
+  }
+
+  &__captcha {
+    @include media(">=tablet") {
+      text-align: right;
+    }
+  }
+
+  &__legals {
+    text-align: left;
+  }
+
+  &__checkbox {
+    margin-bottom: 0.5rem;
+
+    label {
+      color: $base_color_beta;
+    }
+
+    /* Base for label styling */
+    [type="checkbox"]:not(:checked),
+    [type="checkbox"]:checked {
+      position: absolute;
+      left: -9999px;
+    }
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+      position: relative;
+      padding-left: 1.95em;
+      cursor: pointer;
+    }
+
+    /* checkbox aspect */
+    [type="checkbox"]:not(:checked) + label:before,
+    [type="checkbox"]:checked + label:before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.2rem;
+      width: 1rem; height: 1rem;
+      background: rgba($base_color_beta, 0.2);
+    }
+    /* checked mark aspect */
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+      content: '\f00c';
+      position: absolute;
+      top: .4rem; left: .1rem;
+      font-size: 0.8rem;
+      font-family: FontAwesome;
+      line-height: 0.8;
+      color: $base_color_beta;
+      transition: all .2s;
+    }
+    /* checked mark aspect changes */
+    [type="checkbox"]:not(:checked) + label:after {
+      opacity: 0;
+      transform: scale(0);
+    }
+    [type="checkbox"]:checked + label:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  }
+
 }
