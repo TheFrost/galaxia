@@ -1,12 +1,44 @@
 /*Modal styles*/
 .c-modal {
-  background-color: rgba($base_color_delta, 0.85);
+  padding: 35px 1rem;
 
-  &--login {
+  background-color: rgba($base_color_epsilon, 0.85);
+
+  @include media(">=tablet") {
+    padding: 35px;
+  }
+
+  &--login,
+  &--code {
     max-width: 500px;
 
     .c-form {
       max-width: 300px;
+    }
+  }
+
+  &--code {
+    .c-modal {
+      &__points-copy {
+        margin: 2rem 0;
+
+        color: $base_color_beta;
+      }
+
+      &__text {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .c-button {
+      &:first-child {
+        margin-bottom: 2rem;
+
+        @include media(">=tablet") {
+          margin-right: 1rem;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 

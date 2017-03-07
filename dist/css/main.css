@@ -139,11 +139,26 @@ button.c-button {
 
 /*Modal styles*/
 .c-modal {
-  background-color: rgba(127, 52, 148, 0.85); }
-  .c-modal--login {
+  padding: 35px 1rem;
+  background-color: rgba(50, 29, 90, 0.85); }
+  @media (min-width: 768px) {
+    .c-modal {
+      padding: 35px; } }
+  .c-modal--login, .c-modal--code {
     max-width: 500px; }
-    .c-modal--login .c-form {
+    .c-modal--login .c-form, .c-modal--code .c-form {
       max-width: 300px; }
+  .c-modal--code .c-modal__points-copy {
+    margin: 2rem 0;
+    color: #F8961D; }
+  .c-modal--code .c-modal__text {
+    margin-bottom: 4rem; }
+  .c-modal--code .c-button:first-child {
+    margin-bottom: 2rem; }
+    @media (min-width: 768px) {
+      .c-modal--code .c-button:first-child {
+        margin-right: 1rem;
+        margin-bottom: 0; } }
   .c-modal__close {
     left: auto;
     right: -43px;
