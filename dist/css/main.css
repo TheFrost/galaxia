@@ -229,6 +229,8 @@ button.c-button {
     margin-bottom: 1rem;
     -webkit-transition: all 0.33s ease-in-out;
     transition: all 0.33s ease-in-out; }
+    .c-form__input.lv-error:before, .c-form__input.lv-error:after {
+      border-color: red; }
     .c-form__input:before, .c-form__input:after {
       content: '';
       position: absolute;
@@ -344,6 +346,9 @@ button.c-button {
       opacity: 1;
       -webkit-transform: scale(1);
               transform: scale(1); }
+  .c-form__message {
+    font-size: 14px;
+    color: red; }
 
 /*Layout*/
 .l-section:nth-of-type(1) .l-section__inner {
