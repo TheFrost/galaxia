@@ -18,9 +18,9 @@ html, body {
     -webkit-overflow-scrolling : touch !important;
     overflow: auto;
 
-    @include media(">desktop") {
-        overflow: hidden;
-    }
+    // @include media(">desktop") {
+    //     overflow: hidden;
+    // }
 
     &::before {
         content: 'mobile';
@@ -61,7 +61,8 @@ a {
     text-decoration: none;
 }
 
-input {
+input, label, button {
+    font-weight: 500;
     font-size: 1rem;
     font-family: $base_font;
     text-transform: uppercase;
@@ -72,4 +73,8 @@ input {
 
 input, button {
     outline: none;
+}
+
+button {
+    cursor: pointer;
 }

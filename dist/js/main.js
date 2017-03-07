@@ -1,42 +1,48 @@
 (function(window, document) {
     
     // Instance
-    var OnePageScrollModule = new OnePageScrollModule;
+    var App = new App;
 
     // Module
-    function OnePageScrollModule() {
+    function App() {
 
-        // variables
-        var delta = 0,
-            scrollTreshhold = 5,
-            actual = 1;
-
-        // DOM elements
-        var sectionsAvailable = $('.l-section');
-
-        // control toggle 
+        var _inputs = $('.c-form__input input');
 
         init();
 
         ///////////////////// PUBLIC
 
         function init () {
-            console.log('init!!');
+            bindEvents();
         }
 
         function bindEvents () {
-            
-            // check on resize if is mobile and on/off events
-            $(window).on('resize', _validateResolution);
+
+            _inputs.change(_onChangeInput);
+            _inputs.focusin(_focusIn);
+            _inputs.focusout(_focusOut);
 
         }
 
-        ////////////7777///// PRIVATE
+        ///////////////////// PRIVATE
 
-        function _validateResolution () {
-            if (_isMobile()) {
+        function _onChangeInput () {
+            var that = $(this),
+                parent = that.parent('.c-form__input');
 
+            if (!_.isEmpty(that.val())) {
+                parent.addClass('js-dirty');
+            } else {
+                parent.removeClass('js-dirty');
             }
+        }
+
+        function _focusIn () {
+            $(this).parent('.c-form__input').addClass('js-focus');
+        }
+
+        function _focusOut () {
+            $(this).parent('.c-form__input').removeClass('js-focus');
         }
 
     };

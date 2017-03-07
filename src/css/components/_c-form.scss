@@ -1,0 +1,103 @@
+/*form styles*/
+.c-form {
+  width: 100%;
+  margin: 1rem auto;
+
+  &__group {
+    margin-bottom: 2rem;
+
+    &--doble {
+      .c-form__input {
+        float: left;
+        width: calc(50% - 0.5rem);
+
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+
+      position: absolute;
+      top: 0;
+
+      width: 50%;
+      height: calc(100% - 2px);
+      border: 1px solid $base_color_beta;
+
+      transition: all 0.33s ease-in-out;
+    }
+
+    &:before {
+      left: 0;
+
+      border-right: none;
+    }
+
+    &:after {
+      right: 0;
+
+      border-left: none;
+    }
+
+    &.js-dirty,
+    &.js-focus {
+      &:after,
+      &:before {
+        width: 40%;
+      }
+
+      input {
+        background: none;
+      }
+
+      label {
+        transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1);
+      }
+    }
+
+    input {
+      position: relative;
+      z-index: 20;
+
+      width: 100%;
+      padding: 0.3rem;
+
+      text-align: center;
+
+      background: rgba($base_color_beta, 0.2);
+      border: none;
+      color: $base_color_alpha;
+
+      transition: all 0.33s ease-in-out;
+    }
+
+    label {
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      z-index: 10;
+
+      color: $base_color_beta;
+
+      transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
+      transition: all 0.33s ease-in-out;
+    }
+  }
+
+  &__forgot {
+    display: block;
+    margin-bottom: 1rem;
+
+    font-size: 0.8rem;
+    text-decoration: underline;
+
+    color: white;
+  }
+}
