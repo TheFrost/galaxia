@@ -30,6 +30,8 @@
 
         <!-- Sidenav -->
         <nav class="l-sidenav">
+            <a href="#" class="l-sidenav__close" id="closeMenu"></a>
+
             <header class="l-sidenav__head">
                 <figure class="l-sidenav__brand">
                     <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
@@ -41,10 +43,10 @@
 
             <ul class="l-sidenav__menu u-listnostyle">
                 <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Inicio</a>
+                    <a href="#inicio" class="l-sidenav__menu-link">Inicio</a>
                 </li>
                 <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Recompensas</a>
+                    <a href="#recompensas" class="l-sidenav__menu-link">Recompensas</a>
                 </li>
                 <li class="l-sidenav__menu-item">
                     <a href="#" class="l-sidenav__menu-link">Misión</a>
@@ -69,7 +71,7 @@
                     <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
                 </figure>
                 <div class="l-header__menu u-table-cell u-align-right">
-                    <a href="#" class="l-header__menu-trigger">
+                    <a href="#" class="l-header__menu-trigger" id="menuTrigger">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -105,72 +107,74 @@
         </header>
         <!-- // end Header -->
 
-        <!-- Scroll indicator -->
+        <div class="l-wrapper">
+            <!-- Scroll indicator -->
 
-        <!-- // end Scroll indicator -->
+            <!-- // end Scroll indicator -->
 
-        <!-- Content -->
-        <section class="l-section u-clearfix cd-section visible">
-            <div class="l-section__inner">
-                <div class="l-section__safe-area u-pull-right">
-                    <!-- Home -->
-                    <div class="p-home u-clearfix u-fullheight">
-                        <figure class="p-home__art u-pull-left u-fullheight"></figure>
-                        <div class="p-home__intro u-pull-right u-table u-fullheight">
-                            <div class="u-table-cell">
-                                <div class="p-home__intro-inner">
-                                    <header class="p-home__intro-head">
-                                        <p class="p-home__intro-text">Con guardianes de la galaxia y doritos</p>
-                                        <figure class="p-home__intro-copyfig">
-                                            <img src="img/titles/gana_premios.png" alt="Gana premios fuera de este mundo" class="u-imgresponsive">
-                                        </figure>
-                                    </header>
-                                    <ul class="p-home__list">
-                                        <li class="p-home__list-item">Identifícate</li>
-                                        <li class="p-home__list-item">Ingresa tus códigos y juega</li>
-                                        <li class="p-home__list-item">Compite por llegar a la cima</li>
-                                        <li class="p-home__list-item">Los primeros XX lugares obtendrán <br/> un premio</li>
-                                    </ul>
-                                    <a href="#" class="c-button c-button--beta">Iniciar Misión</a>
+            <!-- Content -->
+            <section id="inicio" class="l-section u-clearfix cd-section visible">
+                <div class="l-section__inner">
+                    <div class="l-section__safe-area u-pull-right">
+                        <!-- Home -->
+                        <div class="p-home u-clearfix u-fullheight">
+                            <figure class="p-home__art u-pull-left u-fullheight"></figure>
+                            <div class="p-home__intro u-pull-right u-table u-fullheight">
+                                <div class="u-table-cell">
+                                    <div class="p-home__intro-inner">
+                                        <header class="p-home__intro-head">
+                                            <p class="p-home__intro-text">Con guardianes de la galaxia y doritos</p>
+                                            <figure class="p-home__intro-copyfig">
+                                                <img src="img/titles/gana_premios.png" alt="Gana premios fuera de este mundo" class="u-imgresponsive">
+                                            </figure>
+                                        </header>
+                                        <ul class="p-home__list">
+                                            <li class="p-home__list-item">Identifícate</li>
+                                            <li class="p-home__list-item">Ingresa tus códigos y juega</li>
+                                            <li class="p-home__list-item">Compite por llegar a la cima</li>
+                                            <li class="p-home__list-item">Los primeros XX lugares obtendrán <br/> un premio</li>
+                                        </ul>
+                                        <a href="#" class="c-button c-button--beta">Iniciar Misión</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- // end Home -->
                     </div>
-                    <!-- // end Home -->
                 </div>
-            </div>
-        </section>
-        <section class="l-section u-clearfix cd-section">
-            <div class="l-section__inner">
-                <div class="l-section__safe-area u-pull-right">
-                    <!-- Carousel -->
-                    <div class="c-presentation u-fullheight u-table">
-                        <div class="c-presentation__content u-table-cell">
-                            <header class="c-presentation__head">
-                                <figure class="c-presentation__title">
-                                    <img src="img/titles/productos.png" alt="Productos participantes" class="u-imgresponsive">
+            </section>
+            <section id="productos" class="l-section u-clearfix cd-section">
+                <div class="l-section__inner">
+                    <div class="l-section__safe-area u-pull-right">
+                        <!-- Carousel -->
+                        <div class="c-presentation u-fullheight u-table">
+                            <div class="c-presentation__content u-table-cell">
+                                <header class="c-presentation__head">
+                                    <figure class="c-presentation__title">
+                                        <img src="img/titles/productos.png" alt="Productos participantes" class="u-imgresponsive">
+                                    </figure>
+                                </header>
+
+                                <figure class="c-presentation__composition">
+                                    <img src="img/products/bolsas_producto.png" alt="Productos participantes" class="u-imgresponsive">
                                 </figure>
-                            </header>
 
-                            <figure class="c-presentation__composition">
-                                <img src="img/products/bolsas_producto.png" alt="Productos participantes" class="u-imgresponsive">
-                            </figure>
-
-                            <footer class="c-presentation__footer">
-                                <a href="#" class="c-button c-button--alpha">Iniciar Misión</a>
-                            </footer>
+                                <footer class="c-presentation__footer">
+                                    <a href="#" class="c-button c-button--alpha">Iniciar Misión</a>
+                                </footer>
+                            </div>
                         </div>
+                        <!-- // end Carousel -->
                     </div>
-                    <!-- // end Carousel -->
                 </div>
-            </div>
-        </section>
-        <section class="l-section u-clearfix cd-section">
-            <div class="l-section__inner">
-                <div class="l-section__safe-area u-pull-right"></div>
-            </div>
-        </section>
-        <!-- // end Content -->
+            </section>
+            <section id="recompensas" class="l-section u-clearfix cd-section">
+                <div class="l-section__inner">
+                    <div class="l-section__safe-area u-pull-right"></div>
+                </div>
+            </section>
+            <!-- // end Content -->
+        </div>
 
         <!-- // end Layout -->
 

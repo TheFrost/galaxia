@@ -16,7 +16,8 @@ html, body {
     background-size: cover;
 
     -webkit-overflow-scrolling : touch !important;
-    overflow: auto;
+    overflow-x: hidden; 
+    overflow-y: auto;
 
     // @include media(">desktop") {
     //     overflow: hidden;
@@ -28,6 +29,25 @@ html, body {
 
         @include media(">desktop") {
             content: 'desktop';
+        }
+    }
+
+    &.js-offcanvas-on {
+        overflow: hidden;
+
+        .l-sidenav {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .l-wrapper {
+            &:after {
+                animation-name: fade-in;
+            }
+        }
+
+        .l-wrapper,
+        .l-header {
+            transform: translate3d(250px, 0, 0);
         }
     }
 
