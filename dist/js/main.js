@@ -9,7 +9,8 @@
         var _body= $('body'),
             _inputs = $('.c-form__input input'),
             _menuTrigger = $('#menuTrigger'),
-            _closeMenu = $('#closeMenu');
+            _closeMenu = $('#closeMenu'),
+            _overlay = $('#overlay');
 
         init();
 
@@ -27,6 +28,7 @@
 
             _menuTrigger.on('click', _toggleMenu);
             _closeMenu.on('click', _toggleMenu);
+            _overlay.on('click', _toggleMenu);
 
         }
 
