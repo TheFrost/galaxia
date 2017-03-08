@@ -26,6 +26,22 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
+        <!-- inline svg -->
+        
+
+        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <symbol id="icon-arrows" viewBox="0 0 44 32">
+                    <title>arrows</title>
+                    <path d="M14.86 31.83l15.92-15.92-15.92-15.91-0.86 0.86 15.054 15.054-15.054 15.056 0.86 0.86z"></path>
+                    <path d="M26.86 31.828l15.922-15.92-15.922-15.908-0.86 0.86 15.056 15.054-15.056 15.056 0.86 0.858z"></path>
+                    <path d="M0.86 31.828l15.922-15.92-15.922-15.908-0.86 0.86 15.054 15.054-15.054 15.056 0.86 0.858z"></path>
+                </symbol>
+            </defs>
+        </svg>
+
+        <!-- // end inline svg -->
+
         <!-- Layout -->
 
         <div class="l-overlay" id="overlay"></div>
@@ -81,6 +97,8 @@
                 </div>
             </section>
 
+            
+
             <section class="l-header__info u-clearfix u-pull-right">
                 <div class="l-header__info-profile u-pull-left">
                     <!-- User profile info -->
@@ -101,7 +119,11 @@
                 <form action="" class="l-header__codeform u-pull-right">
                     <div class="l-header__codeform-group">
                         <input type="text" placeholder="Ingresar Código">
-                        <button type="submit"></button>
+                        <button type="submit">
+                            <svg class="icon icon-arrows">
+                                <use xlink:href="#icon-arrows"></use>
+                            </svg>
+                        </button>
                         <span class="l-header__codeform-message">Código incorrecto</span>
                     </div>
                 </form>
@@ -136,7 +158,14 @@
                                             <li class="p-home__list-item">Compite por llegar a la cima</li>
                                             <li class="p-home__list-item">Los primeros XX lugares obtendrán <br/> un premio</li>
                                         </ul>
-                                        <a href="#" class="c-button c-button--beta">Iniciar Misión</a>
+                                        <a href="#" class="c-button c-button--beta">
+                                            <span>Iniciar Misión</span>
+                                            <span class="c-button__icon">
+                                                <svg class="icon icon-arrows">
+                                                    <use xlink:href="#icon-arrows"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +191,14 @@
                                 </figure>
 
                                 <footer class="c-presentation__footer">
-                                    <a href="#" class="c-button c-button--alpha">Iniciar Misión</a>
+                                    <a href="#" class="c-button c-button--alpha">
+                                        <span>Iniciar Misión</span>
+                                        <span class="c-button__icon">
+                                            <svg class="icon icon-arrows">
+                                                <use xlink:href="#icon-arrows"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
                                 </footer>
                             </div>
                         </div>
@@ -201,11 +237,25 @@
                     <p class="c-form__message c-form__message--error">Usuario o contraseña incorrectos</p>
                 </div>
                 <a href="#resetpass" class="c-form__forgot">¿Olvidaste tu contraseña?</a>
-                <button type="submit" class="c-button c-button--beta">Iniciar sesión</button>
+                <button type="submit" class="c-button c-button--beta">
+                    <span>Iniciar sesión</span>
+                    <span class="c-button__icon">
+                        <svg class="icon icon-arrows">
+                            <use xlink:href="#icon-arrows"></use>
+                        </svg>
+                    </span>
+                </button>
             </form>
             <hr>
             <p class="c-modal__text">¿Aún no tienes una contraseña?</p>
-            <a href="#" class="c-button c-button--beta" data-remodal-target="register">Regístrate aquí</a>
+            <a href="#" class="c-button c-button--beta" data-remodal-target="register">
+                <span>Regístrate aquí</span>
+                <span class="c-button__icon">
+                    <svg class="icon icon-arrows">
+                        <use xlink:href="#icon-arrows"></use>
+                    </svg>
+                </span>
+            </a>
         </div>
         <!-- // end Modal login -->
 
@@ -221,7 +271,14 @@
                         <label for="email">Correo electrónico</label>
                     </div>
                 </div>
-                <button type="submit" class="c-button c-button--beta">Comprobar</button>
+                <button type="submit" class="c-button c-button--beta">
+                    <span>Comprobar</span>
+                    <span class="c-button__icon">
+                        <svg class="icon icon-arrows">
+                            <use xlink:href="#icon-arrows"></use>
+                        </svg>
+                    </span>
+                </button>
             </form>
         </div>
         <!-- // end Modal forgot password -->
@@ -237,8 +294,22 @@
                 con una misión?
             </p>
             <footer class="c-modal__footer">
-                <a href="#" class="c-button c-button--epsilon" data-remodal-target="register">Ni de broma</a>
-                <a href="#" class="c-button c-button--beta" data-remodal-target="register">Ir a la misión</a>
+                <a href="#" class="c-button c-button--epsilon" data-remodal-target="register">
+                    <span>Ni de broma</span>
+                    <span class="c-button__icon">
+                        <svg class="icon icon-arrows">
+                            <use xlink:href="#icon-arrows"></use>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#" class="c-button c-button--beta" data-remodal-target="register">Ir a la misión
+                    <span>Ir a la misión</span>
+                    <span class="c-button__icon">
+                        <svg class="icon icon-arrows">
+                            <use xlink:href="#icon-arrows"></use>
+                        </svg>
+                    </span>
+                </a>
             </footer>
         </div>
         <!-- // end Modal Code -->
@@ -316,7 +387,14 @@
                         <div style="display: inline-block;width: 302px; height:76px; background:red"></div>
                     </div>
                 </footer>
-                <button type="submit" class="c-button c-button--beta">Enviar</button>
+                <button type="submit" class="c-button c-button--beta">
+                    <span>Enviar</span>
+                    <span class="c-button__icon">
+                        <svg class="icon icon-arrows">
+                            <use xlink:href="#icon-arrows"></use>
+                        </svg>
+                    </span>
+                </button>
             </form>
         </div>
         <!-- // end Modal register -->

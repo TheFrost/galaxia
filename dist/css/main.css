@@ -122,6 +122,14 @@ input, button {
 button {
   cursor: pointer; }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
 /*Components*/
 /*Button style*/
 .c-button {
@@ -130,14 +138,18 @@ button {
   padding: 0.3rem 2.5rem 0.3rem 0.5rem;
   border: none;
   border-bottom: 1px solid currentColor; }
-  .c-button:after {
-    content: '';
+  .c-button__icon {
     position: absolute;
     top: 0;
     right: 0;
+    display: block;
     width: 2rem;
-    height: calc(100% - 3px);
+    height: 100%;
+    padding-top: 0.1rem;
+    text-align: center;
     border-bottom: 3px solid currentColor; }
+    .c-button__icon .icon {
+      vertical-align: middle; }
   .c-button--beta {
     color: #F8961D;
     background-color: rgba(248, 150, 29, 0.3); }
@@ -148,8 +160,8 @@ button {
     color: #7F3494;
     background-color: rgba(50, 29, 90, 0.85); }
 
-button.c-button {
-  line-height: 1; }
+button.c-button .c-button__icon {
+  padding-top: 0.2rem; }
 
 /*Modal styles*/
 .c-modal {
@@ -540,8 +552,10 @@ button.c-button {
     right: 0;
     width: 2.5rem;
     height: 100%;
+    padding-top: 0.1rem;
     background-color: rgba(218, 85, 150, 0.5);
     border: none;
+    color: #DA5596;
     cursor: pointer; }
     @media (min-width: 768px) {
       .l-header__codeform button {
