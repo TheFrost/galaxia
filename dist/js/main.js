@@ -6,7 +6,11 @@
     // Module
     function App() {
 
-        var _inputs = $('.c-form__input input');
+        var _body= $('body'),
+            _inputs = $('.c-form__input input'),
+            _menuTrigger = $('#menuTrigger'),
+            _closeMenu = $('#closeMenu'),
+            _overlay = $('#overlay');
 
         init();
 
@@ -22,9 +26,19 @@
             _inputs.focusin(_focusIn);
             _inputs.focusout(_focusOut);
 
+            _menuTrigger.on('click', _toggleMenu);
+            _closeMenu.on('click', _toggleMenu);
+            _overlay.on('click', _toggleMenu);
+
         }
 
         ///////////////////// PRIVATE
+
+        function _toggleMenu (evt) {
+            evt.preventDefault();
+
+            _body.toggleClass('js-offcanvas-on');
+        }
 
         function _onChangeInput () {
             var that = $(this),

@@ -16,7 +16,8 @@ html, body {
     background-size: cover;
 
     -webkit-overflow-scrolling : touch !important;
-    overflow: auto;
+    overflow-x: hidden; 
+    overflow-y: auto;
 
     // @include media(">desktop") {
     //     overflow: hidden;
@@ -28,6 +29,23 @@ html, body {
 
         @include media(">desktop") {
             content: 'desktop';
+        }
+    }
+
+    &.js-offcanvas-on {
+        overflow: hidden;
+
+        .l-sidenav {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .l-overlay {
+            animation-name: fade-in;
+        }
+
+        .l-wrapper,
+        .l-header {
+            transform: translate3d(250px, 0, 0);
         }
     }
 
@@ -77,4 +95,13 @@ input, button {
 
 button {
     cursor: pointer;
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
 }

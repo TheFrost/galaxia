@@ -8,17 +8,23 @@
     border: none;
     border-bottom: 1px solid currentColor;
 
-    &:after {
-        content: '';
-
+    &__icon {
         position: absolute;
         top: 0;
         right: 0;
 
+        display: block;
         width: 2rem;
-        height: calc(100% - 3px);
+        height: 100%;
+        padding-top: 0.1rem;
+
+        text-align: center;
 
         border-bottom: 3px solid currentColor;
+
+        .icon {
+            vertical-align: middle;
+        }
     }
 
     &--beta {
@@ -38,5 +44,7 @@
 }
 
 button.c-button {
-    line-height: 1;
+    .c-button__icon {
+        padding-top: 0.2rem;
+    }
 }

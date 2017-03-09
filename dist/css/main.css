@@ -67,13 +67,27 @@ html, body {
   background: url("../img/img-1.jpg") no-repeat center center;
   background-size: cover;
   -webkit-overflow-scrolling: touch !important;
-  overflow: auto; }
+  overflow-x: hidden;
+  overflow-y: auto; }
   html::before, body::before {
     content: 'mobile';
     display: none; }
     @media (min-width: 1025px) {
       html::before, body::before {
         content: 'desktop'; } }
+  html.js-offcanvas-on, body.js-offcanvas-on {
+    overflow: hidden; }
+    html.js-offcanvas-on .l-sidenav, body.js-offcanvas-on .l-sidenav {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0); }
+    html.js-offcanvas-on .l-overlay, body.js-offcanvas-on .l-overlay {
+      -webkit-animation-name: fade-in;
+              animation-name: fade-in; }
+    html.js-offcanvas-on .l-wrapper,
+    html.js-offcanvas-on .l-header, body.js-offcanvas-on .l-wrapper,
+    body.js-offcanvas-on .l-header {
+      -webkit-transform: translate3d(250px, 0, 0);
+              transform: translate3d(250px, 0, 0); }
   @media (min-width: 1025px) {
     html[data-hijacking="on"] .cd-section, body[data-hijacking="on"] .cd-section {
       opacity: 0;
@@ -108,6 +122,14 @@ input, button {
 button {
   cursor: pointer; }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
 /*Components*/
 /*Button style*/
 .c-button {
@@ -116,14 +138,18 @@ button {
   padding: 0.3rem 2.5rem 0.3rem 0.5rem;
   border: none;
   border-bottom: 1px solid currentColor; }
-  .c-button:after {
-    content: '';
+  .c-button__icon {
     position: absolute;
     top: 0;
     right: 0;
+    display: block;
     width: 2rem;
-    height: calc(100% - 3px);
+    height: 100%;
+    padding-top: 0.1rem;
+    text-align: center;
     border-bottom: 3px solid currentColor; }
+    .c-button__icon .icon {
+      vertical-align: middle; }
   .c-button--beta {
     color: #F8961D;
     background-color: rgba(248, 150, 29, 0.3); }
@@ -134,8 +160,8 @@ button {
     color: #7F3494;
     background-color: rgba(50, 29, 90, 0.85); }
 
-button.c-button {
-  line-height: 1; }
+button.c-button .c-button__icon {
+  padding-top: 0.2rem; }
 
 /*Modal styles*/
 .c-modal {
@@ -394,20 +420,45 @@ button.c-button {
   top: 0;
   left: 0;
   z-index: 100;
-  display: none;
+  display: table;
   width: 100%;
   max-width: 250px;
   padding: 2rem;
-  height: 150vh;
+  height: 100vh;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  -webkit-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out; }
   @media (min-width: 1024px) {
     .l-sidenav {
-      display: block; } }
+      display: block;
+      -webkit-transform: none;
+              transform: none; } }
+  .l-sidenav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../img/cerrar.svg") no-repeat center center;
+    background-size: cover; }
+    @media (min-width: 1024px) {
+      .l-sidenav__close {
+        display: none; } }
+  .l-sidenav__head {
+    display: none; }
+    @media (min-width: 1024px) {
+      .l-sidenav__head {
+        display: block; } }
   .l-sidenav__brand {
     display: inline-block;
     margin-bottom: 2rem; }
   .l-sidenav__menu {
+    display: table-cell;
+    vertical-align: middle;
     text-align: left; }
     .l-sidenav__menu-link {
       display: block;
@@ -425,9 +476,13 @@ button.c-button {
   top: 0;
   left: 0;
   z-index: 90;
-  width: 100%;
+  width: 100vw;
   padding: 1rem 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.33s ease-in-out;
+  transition: all 0.33s ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   /*mobile brand styles*/ }
   @media (min-width: 768px) {
     .l-header {
@@ -497,8 +552,10 @@ button.c-button {
     right: 0;
     width: 2.5rem;
     height: 100%;
+    padding-top: 0.1rem;
     background-color: rgba(218, 85, 150, 0.5);
     border: none;
+    color: #DA5596;
     cursor: pointer; }
     @media (min-width: 768px) {
       .l-header__codeform button {
@@ -535,6 +592,61 @@ button.c-button {
         bottom: 0; }
   .l-header .u-table-cell {
     width: calc(100% / 3); }
+
+/*wrapper content*/
+.l-wrapper {
+  -webkit-transition: all 0.33s ease-in-out;
+  transition: all 0.33s ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+
+/*Full wrapper overlay*/
+.l-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(50, 29, 90, 0.85);
+  -webkit-animation-duration: 0.33s;
+          animation-duration: 0.33s;
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
 
 /*Pages*/
 /*Home styles*/

@@ -8,7 +8,7 @@
     "build-css": "node-sass --include-path scss src/css/main.scss dist/css/main.css",
     "postbuild-css": "npm run prefix-css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "serve": "browser-sync start --server 'dist/' --files 'dist/' --browser chrome & npm run watch-css"
+    "serve": "browser-sync start --server 'dist/' --files 'dist/' --browser firefox & npm run watch-css"
   },
   "author": "",
   "license": "BSD-2-Clause",
