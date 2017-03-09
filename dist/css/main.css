@@ -235,9 +235,27 @@ button.c-button .c-button__icon {
     max-width: 300px;
     margin-bottom: 2rem; }
   .c-presentation__composition {
-    display: inline-block; }
+    display: none; }
+    @media (min-width: 768px) {
+      .c-presentation__composition {
+        display: inline-block; } }
   .c-presentation__footer {
     margin-top: 2rem; }
+  .c-presentation__carousel {
+    width: 300px;
+    margin: 0 auto;
+    /*custom owl styles*/ }
+    .c-presentation__carousel .owl-prev {
+      left: 0; }
+    .c-presentation__carousel .owl-next {
+      right: 0; }
+    .c-presentation__carousel .owl-prev,
+    .c-presentation__carousel .owl-next {
+      position: absolute;
+      top: 50%;
+      margin-top: -52px;
+      font-size: 5rem;
+      color: #DA5596; }
 
 /*form styles*/
 .c-form {

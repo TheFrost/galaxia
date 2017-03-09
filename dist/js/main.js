@@ -6,21 +6,28 @@
     // Module
     function App() {
 
-        var _body= $('body'),
+        var _body = $('body'),
+            _window = $(window),
             _inputs = $('.c-form__input input'),
             _menuTrigger = $('#menuTrigger'),
             _closeMenu = $('#closeMenu'),
-            _overlay = $('#overlay');
+            _overlay = $('#overlay'),
+            _productCarousel = $('#productsCarousel');
 
         init();
 
         ///////////////////// PUBLIC
 
         function init () {
-            bindEvents();
+            _bindEvents();
+            _validateProductCarousel();
         }
 
-        function bindEvents () {
+        function _bindEvents () {
+
+            _window.resize(function() {
+                _validateProductCarousel();
+            });
 
             _inputs.change(_onChangeInput);
             _inputs.focusin(_focusIn);
@@ -33,6 +40,30 @@
         }
 
         ///////////////////// PRIVATE
+
+        function _validateProductCarousel () {
+            if (_window.innerWidth() <= 768) {
+                _initProductCarousel();
+            } else {
+                _killProductCarousel();
+            }
+        }
+
+        function _killProductCarousel () {
+            _productCarousel.owlCarousel('destroy');
+        }
+
+        function _initProductCarousel () {
+            _productCarousel.owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                navText: [
+                    '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                    '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+                ],
+            });
+        }
 
         function _toggleMenu (evt) {
             evt.preventDefault();

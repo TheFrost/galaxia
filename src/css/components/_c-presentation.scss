@@ -10,10 +10,38 @@
   }
 
   &__composition {
-    display: inline-block;
+    display: none;
+    @include media(">=tablet") {
+      display: inline-block;
+    }
   }
 
   &__footer {
     margin-top: 2rem;
+  }
+
+  &__carousel {
+    width: 300px;
+    margin: 0 auto;
+
+    /*custom owl styles*/
+    .owl-prev {
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+    }
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      top: 50%;
+
+      margin-top: -52px;
+      font-size: 5rem;
+
+      color: $base_color_alpha;
+    }
   }
 }
