@@ -89,8 +89,8 @@ html, body {
     html.js-offcanvas-on .l-wrapper,
     html.js-offcanvas-on .l-header, body.js-offcanvas-on .l-wrapper,
     body.js-offcanvas-on .l-header {
-      -webkit-transform: translate3d(250px, 0, 0);
-              transform: translate3d(250px, 0, 0); }
+      -webkit-transform: translate3d(-250px, 0, 0);
+              transform: translate3d(-250px, 0, 0); }
   @media (min-width: 1025px) {
     html[data-hijacking="on"] .cd-section, body[data-hijacking="on"] .cd-section {
       opacity: 0;
@@ -237,15 +237,16 @@ button.c-button .c-button__icon {
     position: relative; }
   .c-presentation__title {
     display: inline-block;
-    max-width: 300px;
-    margin-bottom: 2rem; }
+    max-width: 200px; }
+    @media (min-width: 768px) {
+      .c-presentation__title {
+        max-width: 300px; } }
   .c-presentation__composition {
-    display: none; }
+    display: none;
+    margin: 2rem 0; }
     @media (min-width: 768px) {
       .c-presentation__composition {
         display: inline-block; } }
-  .c-presentation__footer {
-    margin-top: 2rem; }
   .c-presentation__carousel {
     margin: 0 auto;
     /*custom owl styles*/ }
@@ -425,7 +426,6 @@ button.c-button .c-button__icon {
   background-size: cover; }
 
 .l-section__inner {
-  padding-top: 143px;
   padding-right: 1rem;
   height: 100vh;
   visibility: visible;
@@ -440,7 +440,7 @@ button.c-button .c-button__icon {
 
 .l-section__safe-area {
   width: 100%;
-  height: calc(100vh - 143px); }
+  height: 100vh; }
   @media (min-width: 768px) {
     .l-section__safe-area {
       height: calc(100vh - 175px); } }
@@ -453,7 +453,7 @@ button.c-button .c-button__icon {
 .l-sidenav {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 100;
   display: table;
   width: 100%;
@@ -462,12 +462,14 @@ button.c-button .c-button__icon {
   height: 100vh;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
   -webkit-transition: all 0.30s ease-in-out;
   transition: all 0.30s ease-in-out; }
   @media (min-width: 1024px) {
     .l-sidenav {
+      right: auto;
+      left: 0;
       display: block;
       -webkit-transform: none;
               transform: none; } }
@@ -558,12 +560,16 @@ button.c-button .c-button__icon {
     font-size: 14px;
     color: #0182AF; }
   .l-header__codeform input {
-    width: 150px;
+    width: 130px;
     padding: 0.6rem 0.5rem;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     border: none;
     background: none;
     color: #0182AF; }
+    @media (min-width: 321px) {
+      .l-header__codeform input {
+        width: 150px;
+        font-size: 0.9rem; } }
     @media (min-width: 768px) {
       .l-header__codeform input {
         width: 200px;
@@ -691,7 +697,7 @@ button.c-button .c-button__icon {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
+    width: 80%;
     background: url("../img/img-arte-mobile.png") no-repeat top right;
     background-size: cover; }
     @media (min-width: 768px) {

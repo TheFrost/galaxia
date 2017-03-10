@@ -10,6 +10,7 @@
             _window = $(window),
             _inputs = $('.c-form__input input'),
             _menuTrigger = $('#menuTrigger'),
+            _menuLinks = $('.l-sidenav__menu-link'),
             _closeMenu = $('#closeMenu'),
             _overlay = $('#overlay'),
             _productCarousel = $('#productsCarousel'),
@@ -36,6 +37,7 @@
             _inputs.focusout(_focusOut);
 
             _menuTrigger.on('click', _toggleMenu);
+            _menuLinks.on('click', _toggleMenu);
             _closeMenu.on('click', _toggleMenu);
             _overlay.on('click', _toggleMenu);
 
@@ -97,7 +99,6 @@
         }
 
         function _toggleMenu (evt) {
-            evt.preventDefault();
 
             _body.toggleClass('js-offcanvas-on');
         }

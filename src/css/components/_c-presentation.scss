@@ -9,19 +9,19 @@
 
   &__title {
     display: inline-block;
-    max-width: 300px;
-    margin-bottom: 2rem;
+    max-width: 200px;
+
+    @include media(">=tablet") {
+      max-width: 300px;
+    }
   }
 
   &__composition {
     display: none;
+    margin: 2rem 0;
     @include media(">=tablet") {
       display: inline-block;
     }
-  }
-
-  &__footer {
-    margin-top: 2rem;
   }
 
   &__carousel {

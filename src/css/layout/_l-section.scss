@@ -9,7 +9,6 @@
     }
 
     &__inner {
-        padding-top: 143px;
         padding-right: 1rem;
         height: $section_base_height;
         
@@ -27,7 +26,7 @@
 
     &__safe-area {
         width: 100%;
-        height: calc(100vh - 143px);
+        height: $section_base_height;
 
         @include media(">=tablet") {
             height: calc(100vh - 175px);

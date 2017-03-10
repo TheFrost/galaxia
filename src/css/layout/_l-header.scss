@@ -80,14 +80,20 @@
     }
 
     input {
-      width: 150px;
+      width: 130px;
       padding: 0.6rem 0.5rem;
 
-      font-size: 0.9rem;
+      font-size: 0.75rem;
 
       border: none;
       background: none;
       color: $base_color_gamma;
+
+      @include media(">phone") {
+        width: 150px;
+
+        font-size: 0.9rem;
+      }
 
       @include media(">=tablet") {
         width: 200px;
