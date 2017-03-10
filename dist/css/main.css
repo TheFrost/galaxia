@@ -33,6 +33,9 @@
 .u-fullheight {
   height: 100%; }
 
+.u-fullwidth {
+  width: 100%; }
+
 .u-align-center {
   text-align: center; }
 
@@ -230,6 +233,8 @@ button.c-button .c-button__icon {
 .c-presentation {
   text-align: center;
   width: 100%; }
+  .c-presentation__content {
+    position: relative; }
   .c-presentation__title {
     display: inline-block;
     max-width: 300px;
@@ -242,9 +247,12 @@ button.c-button .c-button__icon {
   .c-presentation__footer {
     margin-top: 2rem; }
   .c-presentation__carousel {
-    width: 300px;
     margin: 0 auto;
     /*custom owl styles*/ }
+    .c-presentation__carousel--products {
+      width: 300px; }
+    .c-presentation__carousel--gifts {
+      width: 100%; }
     .c-presentation__carousel .owl-prev {
       left: 0; }
     .c-presentation__carousel .owl-next {
@@ -256,6 +264,15 @@ button.c-button .c-button__icon {
       margin-top: -52px;
       font-size: 5rem;
       color: #DA5596; }
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0); }
 
 /*form styles*/
 .c-form {
@@ -674,13 +691,18 @@ button.c-button .c-button__icon {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
-    background: url("../img/img-arte-escritorio.png") no-repeat bottom right;
+    width: 70%;
+    background: url("../img/img-arte-mobile.png") no-repeat top right;
     background-size: cover; }
     @media (min-width: 768px) {
       .p-home__art {
-        width: 40%;
-        min-width: 400px; } }
+        width: 70%;
+        min-width: 400px;
+        background: url("../img/img-arte-escritorio.png") no-repeat top right;
+        background-size: cover; } }
+    @media (min-width: 1024px) {
+      .p-home__art {
+        width: 40%; } }
   .p-home__intro {
     position: relative;
     z-index: 10;

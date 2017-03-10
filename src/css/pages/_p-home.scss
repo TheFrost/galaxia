@@ -8,14 +8,19 @@
         top: 0;
         left: 0;
 
-        width: 50%;
+        width: 70%;
 
-        background: url('../img/img-arte-escritorio.png') no-repeat bottom right;
+        background: url('../img/img-arte-mobile.png') no-repeat top right;
         background-size: cover;
 
         @include media(">=tablet") {
-            width: 40%;
+            width: 70%;
             min-width: 400px;
+            background: url('../img/img-arte-escritorio.png') no-repeat top right;
+            background-size: cover;
+        }
+        @include media(">=desktop") {
+            width: 40%;
         }
     }
 

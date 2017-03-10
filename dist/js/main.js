@@ -12,7 +12,8 @@
             _menuTrigger = $('#menuTrigger'),
             _closeMenu = $('#closeMenu'),
             _overlay = $('#overlay'),
-            _productCarousel = $('#productsCarousel');
+            _productCarousel = $('#productsCarousel'),
+            _giftsCarousel = $('#giftsCarousel');
 
         init();
 
@@ -21,6 +22,7 @@
         function init () {
             _bindEvents();
             _validateProductCarousel();
+            _initGiftsCarousel();
         }
 
         function _bindEvents () {
@@ -41,8 +43,37 @@
 
         ///////////////////// PRIVATE
 
+        function _initGiftsCarousel () {
+            _giftsCarousel.owlCarousel({
+                loop: true,
+                nav: true,
+                navText: [
+                    '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                    '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+                ],
+                singleItem: true,
+                // responsiveClass:true,
+                // responsiveBaseElement: '.l-section__safe-area',
+                // responsive:{
+                //     0:{
+                //         items:1,
+                //         nav:true
+                //     },
+                //     600:{
+                //         items:3,
+                //         nav:false
+                //     },
+                //     1000:{
+                //         items:5,
+                //         nav:true,
+                //         loop:false
+                //     }
+                // }
+            });
+        }
+
         function _validateProductCarousel () {
-            if (_window.innerWidth() <= 768) {
+            if (_window.innerWidth() < 768) {
                 _initProductCarousel();
             } else {
                 _killProductCarousel();

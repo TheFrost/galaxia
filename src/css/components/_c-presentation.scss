@@ -3,6 +3,10 @@
   text-align: center;
   width: 100%;
 
+  &__content {
+    position: relative;
+  }
+
   &__title {
     display: inline-block;
     max-width: 300px;
@@ -21,8 +25,15 @@
   }
 
   &__carousel {
-    width: 300px;
     margin: 0 auto;
+
+    &--products {
+      width: 300px;
+    }
+
+    &--gifts {
+      width: 100%;
+    }
 
     /*custom owl styles*/
     .owl-prev {
@@ -44,4 +55,15 @@
       color: $base_color_alpha;
     }
   }
+}
+
+
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility:    hidden;
+-ms-backface-visibility:     hidden;
+-webkit-transform: translate3d(0,0,0);
+-moz-transform: translate3d(0,0,0);
+-ms-transform: translate3d(0,0,0);
 }
