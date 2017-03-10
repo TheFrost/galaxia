@@ -30,16 +30,52 @@
     &--beta {
         color: $base_color_beta;
         background-color: rgba($base_color_beta, 0.3);  
+        &:hover,
+        &:active {
+            color: white;
+            border-bottom-color: $base_color_beta;
+           .c-button {
+               &__icon {
+                   background-color: $base_color_beta;
+                   border-bottom-color: $base_color_beta;
+                   color: white;
+               }
+           }
+        }
     }
 
     &--alpha {
         color: $base_color_alpha;
-        background-color: rgba($base_color_alpha, 0.3);  
+        background-color: rgba($base_color_alpha, 0.3);
+        &:hover,
+        &:active {
+            color: white;
+            border-bottom-color: $base_color_alpha;
+           .c-button {
+               &__icon {
+                   background-color: $base_color_alpha;
+                   border-bottom-color: $base_color_alpha;
+                   color: white;
+               }
+           }
+        }  
     }
 
     &--epsilon {
         color: $base_color_delta;
-        background-color: rgba($base_color_epsilon, 0.3);  
+        background-color: rgba($base_color_epsilon, 0.3);
+         &:hover,
+        &:active {
+            color: white;
+            border-bottom-color: $base_color_epsilon;
+           .c-button {
+               &__icon {
+                   background-color: $base_color_epsilon;
+                   border-bottom-color: $base_color_epsilon;
+                   color: white;
+               }
+           }
+        }  
     }
 }
 

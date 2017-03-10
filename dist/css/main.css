@@ -157,12 +157,33 @@ button {
   .c-button--beta {
     color: #F8961D;
     background-color: rgba(248, 150, 29, 0.3); }
+    .c-button--beta:hover, .c-button--beta:active {
+      color: white;
+      border-bottom-color: #F8961D; }
+      .c-button--beta:hover .c-button__icon, .c-button--beta:active .c-button__icon {
+        background-color: #F8961D;
+        border-bottom-color: #F8961D;
+        color: white; }
   .c-button--alpha {
     color: #DA5596;
     background-color: rgba(218, 85, 150, 0.3); }
+    .c-button--alpha:hover, .c-button--alpha:active {
+      color: white;
+      border-bottom-color: #DA5596; }
+      .c-button--alpha:hover .c-button__icon, .c-button--alpha:active .c-button__icon {
+        background-color: #DA5596;
+        border-bottom-color: #DA5596;
+        color: white; }
   .c-button--epsilon {
     color: #7F3494;
     background-color: rgba(50, 29, 90, 0.3); }
+    .c-button--epsilon:hover, .c-button--epsilon:active {
+      color: white;
+      border-bottom-color: #321D5A; }
+      .c-button--epsilon:hover .c-button__icon, .c-button--epsilon:active .c-button__icon {
+        background-color: #321D5A;
+        border-bottom-color: #321D5A;
+        color: white; }
 
 button.c-button .c-button__icon {
   padding-top: 0.2rem; }
