@@ -1,0 +1,29 @@
+/*scroll signal*/
+.l-scrollsignal {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 10;
+
+  display: none;
+
+  text-align: center;
+  font-size: 0.5rem;
+
+  @include media(">desktop") {
+    display: block;
+  }
+
+  span {
+    display: block;
+    margin-top: 0.5rem;
+
+    color: white;
+
+    &:last-child {
+      font-size: $base_size;
+
+      color: lighten($base_color_gamma, 10%);
+    }
+  }
+}

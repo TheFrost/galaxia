@@ -82,16 +82,13 @@ html, body {
   html.js-offcanvas-on, body.js-offcanvas-on {
     overflow: hidden; }
     html.js-offcanvas-on .l-sidenav, body.js-offcanvas-on .l-sidenav {
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
+      transform: translate3d(0, 0, 0); }
     html.js-offcanvas-on .l-overlay, body.js-offcanvas-on .l-overlay {
-      -webkit-animation-name: fade-in;
-              animation-name: fade-in; }
+      animation-name: fade-in; }
     html.js-offcanvas-on .l-wrapper,
     html.js-offcanvas-on .l-header, body.js-offcanvas-on .l-wrapper,
     body.js-offcanvas-on .l-header {
-      -webkit-transform: translate3d(-250px, 0, 0);
-              transform: translate3d(-250px, 0, 0); }
+      transform: translate3d(-250px, 0, 0); }
   @media (min-width: 1025px) {
     html[data-hijacking="on"] .cd-section, body[data-hijacking="on"] .cd-section {
       opacity: 0;
@@ -162,7 +159,7 @@ button {
     background-color: rgba(218, 85, 150, 0.3); }
   .c-button--epsilon {
     color: #7F3494;
-    background-color: rgba(50, 29, 90, 0.85); }
+    background-color: rgba(50, 29, 90, 0.3); }
 
 button.c-button .c-button__icon {
   padding-top: 0.2rem; }
@@ -256,9 +253,11 @@ button.c-button .c-button__icon {
     margin: 0 auto;
     /*custom owl styles*/ }
     .c-presentation__carousel--products {
-      width: 300px; }
+      width: 300px;
+      color: #DA5596; }
     .c-presentation__carousel--gifts {
-      width: 300px; }
+      width: 300px;
+      color: #321D5A; }
       @media (min-width: 768px) {
         .c-presentation__carousel--gifts {
           width: 100%; } }
@@ -272,7 +271,7 @@ button.c-button .c-button__icon {
       top: 50%;
       margin-top: -52px;
       font-size: 5rem;
-      color: #DA5596; }
+      color: currentColor; }
 
 .owl-carousel .owl-wrapper,
 .owl-carousel .owl-item {
@@ -297,7 +296,6 @@ button.c-button .c-button__icon {
   .c-form__input {
     position: relative;
     margin-bottom: 1rem;
-    -webkit-transition: all 0.33s ease-in-out;
     transition: all 0.33s ease-in-out; }
     .c-form__input.lv-error:before, .c-form__input.lv-error:after {
       border-color: red; }
@@ -308,7 +306,6 @@ button.c-button .c-button__icon {
       width: 50%;
       height: calc(100% - 2px);
       border: 1px solid #F8961D;
-      -webkit-transition: all 0.33s ease-in-out;
       transition: all 0.33s ease-in-out; }
     .c-form__input:before {
       left: 0;
@@ -323,8 +320,7 @@ button.c-button .c-button__icon {
       .c-form__input.js-dirty input, .c-form__input.js-focus input {
         background: none; }
       .c-form__input.js-dirty label, .c-form__input.js-focus label {
-        -webkit-transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1);
-                transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1); }
+        transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1); }
     .c-form__input input {
       position: relative;
       z-index: 20;
@@ -334,7 +330,6 @@ button.c-button .c-button__icon {
       background: rgba(248, 150, 29, 0.2);
       border: none;
       color: #DA5596;
-      -webkit-transition: all 0.33s ease-in-out;
       transition: all 0.33s ease-in-out; }
     .c-form__input label {
       position: absolute;
@@ -343,9 +338,7 @@ button.c-button .c-button__icon {
       z-index: 10;
       width: 100%;
       color: #F8961D;
-      -webkit-transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
-              transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
-      -webkit-transition: all 0.33s ease-in-out;
+      transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
       transition: all 0.33s ease-in-out; }
   .c-form__forgot {
     display: block;
@@ -406,16 +399,13 @@ button.c-button .c-button__icon {
       font-family: FontAwesome;
       line-height: 0.8;
       color: #F8961D;
-      -webkit-transition: all .2s;
       transition: all .2s; }
     .c-form__checkbox [type="checkbox"]:not(:checked) + label:after {
       opacity: 0;
-      -webkit-transform: scale(0);
-              transform: scale(0); }
+      transform: scale(0); }
     .c-form__checkbox [type="checkbox"]:checked + label:after {
       opacity: 1;
-      -webkit-transform: scale(1);
-              transform: scale(1); }
+      transform: scale(1); }
   .c-form__message {
     font-size: 14px;
     color: red; }
@@ -434,11 +424,9 @@ button.c-button .c-button__icon {
   background-size: cover; }
 
 .l-section__inner {
-  padding-right: 1rem;
   height: 100vh;
   visibility: visible;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+  backface-visibility: hidden; }
   @media (min-width: 768px) {
     .l-section__inner {
       padding-top: 175px; } }
@@ -470,17 +458,14 @@ button.c-button .c-button__icon {
   height: 100vh;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transform: translate3d(100%, 0, 0);
-          transform: translate3d(100%, 0, 0);
-  -webkit-transition: all 0.30s ease-in-out;
+  transform: translate3d(100%, 0, 0);
   transition: all 0.30s ease-in-out; }
   @media (min-width: 1024px) {
     .l-sidenav {
       right: auto;
       left: 0;
       display: block;
-      -webkit-transform: none;
-              transform: none; } }
+      transform: none; } }
   .l-sidenav__close {
     position: absolute;
     top: 1rem;
@@ -524,10 +509,8 @@ button.c-button .c-button__icon {
   width: 100vw;
   padding: 1rem 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.33s ease-in-out;
   transition: all 0.33s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   /*mobile brand styles*/ }
   @media (min-width: 768px) {
     .l-header {
@@ -644,10 +627,8 @@ button.c-button .c-button__icon {
 
 /*wrapper content*/
 .l-wrapper {
-  -webkit-transition: all 0.33s ease-in-out;
   transition: all 0.33s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0); }
 
 /*Full wrapper overlay*/
 .l-overlay {
@@ -658,20 +639,9 @@ button.c-button .c-button__icon {
   height: 100%;
   z-index: 100;
   background-color: rgba(50, 29, 90, 0.85);
-  -webkit-animation-duration: 0.33s;
-          animation-duration: 0.33s;
-  -webkit-animation-name: fade-out;
-          animation-name: fade-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-@-webkit-keyframes fade-in {
-  0% {
-    visibility: hidden;
-    opacity: 0; }
-  100% {
-    opacity: 1;
-    visibility: visible; } }
+  animation-duration: 0.33s;
+  animation-name: fade-out;
+  animation-fill-mode: forwards; }
 
 @keyframes fade-in {
   0% {
@@ -681,14 +651,6 @@ button.c-button .c-button__icon {
     opacity: 1;
     visibility: visible; } }
 
-@-webkit-keyframes fade-out {
-  0% {
-    opacity: 1;
-    visibility: visible; }
-  100% {
-    opacity: 0;
-    visibility: hidden; } }
-
 @keyframes fade-out {
   0% {
     opacity: 1;
@@ -697,10 +659,47 @@ button.c-button .c-button__icon {
     opacity: 0;
     visibility: hidden; } }
 
+/*scroll signal*/
+.l-scrollsignal {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 10;
+  display: none;
+  text-align: center;
+  font-size: 0.5rem; }
+  @media (min-width: 1025px) {
+    .l-scrollsignal {
+      display: block; } }
+  .l-scrollsignal span {
+    display: block;
+    margin-top: 0.5rem;
+    color: white; }
+    .l-scrollsignal span:last-child {
+      font-size: 16px;
+      color: #01a8e2; }
+
 /*Pages*/
 /*Home styles*/
 .p-home {
   position: relative; }
+  .p-home:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: none;
+    width: 204.6px;
+    height: 329.3px;
+    background: url("../img/groot_bebe.png") no-repeat center center;
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .p-home:after {
+        display: block; } }
+    @media (min-width: 1025px) {
+      .p-home:after {
+        right: 20%; } }
   .p-home__art {
     position: absolute;
     top: 0;
@@ -719,9 +718,10 @@ button.c-button .c-button__icon {
         width: 40%; } }
   .p-home__intro {
     position: relative;
-    z-index: 10;
+    z-index: 20;
     width: 60%;
     height: 100%;
+    padding-right: 1rem;
     text-align: center; }
     @media (min-width: 1024px) {
       .p-home__intro {

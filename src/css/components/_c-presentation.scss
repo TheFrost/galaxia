@@ -29,10 +29,14 @@
 
     &--products {
       width: 300px;
+
+      color: $base_color_alpha;
     }
 
     &--gifts {
       width: 300px;
+      
+      color: $base_color_epsilon;
 
       @include media(">=tablet") {
         width: 100%;
@@ -56,7 +60,7 @@
       margin-top: -52px;
       font-size: 5rem;
 
-      color: $base_color_alpha;
+      color: currentColor;
     }
   }
 }
