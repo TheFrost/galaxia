@@ -42,11 +42,16 @@
   }
 
   &__close {
+    top: 1rem;
     left: auto;
-    right: -43px;
+    right: 1rem;
 
     background: url('../img/cerrar.svg') no-repeat center center;
     background-size: 80%;
+
+    @include media(">=tablet") {
+      right: -43px;
+    }
 
     &:before {
       display: none;

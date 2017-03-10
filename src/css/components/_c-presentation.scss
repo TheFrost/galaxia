@@ -32,7 +32,11 @@
     }
 
     &--gifts {
-      width: 100%;
+      width: 300px;
+
+      @include media(">=tablet") {
+        width: 100%;
+      }
     }
 
     /*custom owl styles*/

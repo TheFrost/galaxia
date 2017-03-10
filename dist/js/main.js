@@ -23,6 +23,7 @@
         function init () {
             _bindEvents();
             _validateProductCarousel();
+            _validateMenuLinksEventHandler();
             _initGiftsCarousel();
         }
 
@@ -30,6 +31,7 @@
 
             _window.resize(function() {
                 _validateProductCarousel();
+                _validateMenuLinksEventHandler();
             });
 
             _inputs.change(_onChangeInput);
@@ -37,7 +39,6 @@
             _inputs.focusout(_focusOut);
 
             _menuTrigger.on('click', _toggleMenu);
-            _menuLinks.on('click', _toggleMenu);
             _closeMenu.on('click', _toggleMenu);
             _overlay.on('click', _toggleMenu);
 
@@ -53,24 +54,19 @@
                     '<i class="fa fa-angle-left" aria-hidden="true"></i>',
                     '<i class="fa fa-angle-right" aria-hidden="true"></i>'
                 ],
-                singleItem: true,
-                // responsiveClass:true,
-                // responsiveBaseElement: '.l-section__safe-area',
-                // responsive:{
-                //     0:{
-                //         items:1,
-                //         nav:true
-                //     },
-                //     600:{
-                //         items:3,
-                //         nav:false
-                //     },
-                //     1000:{
-                //         items:5,
-                //         nav:true,
-                //         loop:false
-                //     }
-                // }
+                responsiveClass:true,
+                responsiveBaseElement: 'body',
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:3
+                    },
+                    1025:{
+                        items:5
+                    }
+                }
             });
         }
 
@@ -79,6 +75,14 @@
                 _initProductCarousel();
             } else {
                 _killProductCarousel();
+            }
+        }
+
+        function _validateMenuLinksEventHandler () {
+            if (_window.innerWidth() >= 1024) {
+                _menuLinks.off('click', _toggleMenu);
+            } else {
+                _menuLinks.on('click', _toggleMenu);
             }
         }
 
