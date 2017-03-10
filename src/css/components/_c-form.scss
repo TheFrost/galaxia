@@ -24,7 +24,7 @@
     position: relative;
 
     margin-bottom: 1rem;
-    transition: all 0.33s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &.lv-error {
       &:before,
@@ -43,7 +43,7 @@
       height: calc(100% - 2px);
       border: 1px solid $base_color_beta;
 
-      transition: all 0.33s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
 
     &:before {
@@ -103,7 +103,7 @@
       color: $base_color_beta;
 
       transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
-      transition: all 0.33s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
   }
 

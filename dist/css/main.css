@@ -327,8 +327,8 @@ button.c-button .c-button__icon {
   .c-form__input {
     position: relative;
     margin-bottom: 1rem;
-    -webkit-transition: all 0.33s ease-in-out;
-    transition: all 0.33s ease-in-out; }
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
     .c-form__input.lv-error:before, .c-form__input.lv-error:after {
       border-color: red; }
     .c-form__input:before, .c-form__input:after {
@@ -338,8 +338,8 @@ button.c-button .c-button__icon {
       width: 50%;
       height: calc(100% - 2px);
       border: 1px solid #F8961D;
-      -webkit-transition: all 0.33s ease-in-out;
-      transition: all 0.33s ease-in-out; }
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
     .c-form__input:before {
       left: 0;
       border-right: none; }
@@ -375,8 +375,8 @@ button.c-button .c-button__icon {
       color: #F8961D;
       -webkit-transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
               transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
-      -webkit-transition: all 0.33s ease-in-out;
-      transition: all 0.33s ease-in-out; }
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
   .c-form__forgot {
     display: block;
     margin-bottom: 1rem;
