@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="445px" height="78px" viewBox="0 0 445 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy 4 + bottom</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-0.000114189143%" y1="50.0104319%" x2="100.000114%" y2="50.0104319%" id="linearGradient-1">
+            <stop stop-color="#0094A9" offset="0%"></stop>
+            <stop stop-color="#9600A9" offset="97.37%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="49.9975324%" x2="100.00027%" y2="49.9975324%" id="linearGradient-2">
+            <stop stop-color="#0094A9" offset="0%"></stop>
+            <stop stop-color="#9600A9" offset="97.37%"></stop>
+        </linearGradient>
+        <linearGradient x1="0.000314745843%" y1="49.9975324%" x2="99.9997902%" y2="49.9975324%" id="linearGradient-3">
+            <stop stop-color="#0094A9" offset="0%"></stop>
+            <stop stop-color="#9600A9" offset="97.37%"></stop>
+        </linearGradient>
+        <linearGradient x1="-0.000351559753%" y1="50.0007671%" x2="99.9996484%" y2="50.0007671%" id="linearGradient-4">
+            <stop stop-color="#0094A9" offset="0%"></stop>
+            <stop stop-color="#9600A9" offset="97.37%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Shape-Copy-4-+-bottom" sketch:type="MSLayerGroup">
+            <path d="M0.327,77.193 L0.327,0.935 L444.938,0.935 L444.938,36.564 L404.312,77.193 L0.327,77.193 Z" id="Shape-Copy-4" fill-opacity="0.3" fill="#00567F" sketch:type="MSShapeGroup"></path>
+            <g id="bottom" transform="translate(19.000000, 38.000000)" sketch:type="MSShapeGroup">
+                <path d="M0.816,39.189 L6.801,34.396 L82.407,34.396 L88.39,39.189 L0.816,39.189 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+                <path d="M69.812,39.248 L79.939,31.143 L207.906,31.143 L218.025,39.248 L69.812,39.248 Z" id="Shape" fill="url(#linearGradient-2)"></path>
+                <path d="M224.652,39.248 L231.166,31.143 L313.461,31.143 L319.967,39.248 L224.652,39.248 Z" id="Shape" fill="url(#linearGradient-3)"></path>
+                <path d="M421.889,3.563 L413.842,0.142 L382.84,31.143 L343.066,31.143 L336.555,39.248 L386.682,39.248 L386.545,38.908 L421.889,3.563 Z" id="Shape" fill="url(#linearGradient-4)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

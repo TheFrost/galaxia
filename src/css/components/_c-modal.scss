@@ -1,8 +1,57 @@
 /*Modal styles*/
 .c-modal {
+  position: relative;
+
   padding: 35px 1rem;
 
-  background-color: rgba($base_color_epsilon, 0.85);
+  // background-color: rgba($base_color_epsilon, 0.85);
+  background: none;
+
+  &:before,
+  &:after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+
+    height: 100px;
+
+    background: url('../img/top-modal.svg') no-repeat top center;
+    background-size: cover;
+  }
+
+  &:after {
+    bottom: 0;
+
+    height: 78px;
+    
+    background: url('../img/bottom-modal.svg') no-repeat bottom center;
+    background-size: cover;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 100px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - 178px);
+
+    
+    background: linear-gradient(to bottom, rgba(217,0,233,0.3) 0%, rgba(0,87,127,0.3) 100%);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 10;
+  }
 
   @include media(">=tablet") {
     padding: 35px;

@@ -82,13 +82,16 @@ html, body {
   html.js-offcanvas-on, body.js-offcanvas-on {
     overflow: hidden; }
     html.js-offcanvas-on .l-sidenav, body.js-offcanvas-on .l-sidenav {
-      transform: translate3d(0, 0, 0); }
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0); }
     html.js-offcanvas-on .l-overlay, body.js-offcanvas-on .l-overlay {
-      animation-name: fade-in; }
+      -webkit-animation-name: fade-in;
+              animation-name: fade-in; }
     html.js-offcanvas-on .l-wrapper,
     html.js-offcanvas-on .l-header, body.js-offcanvas-on .l-wrapper,
     body.js-offcanvas-on .l-header {
-      transform: translate3d(-250px, 0, 0); }
+      -webkit-transform: translate3d(-250px, 0, 0);
+              transform: translate3d(-250px, 0, 0); }
   @media (min-width: 1025px) {
     html[data-hijacking="on"] .cd-section, body[data-hijacking="on"] .cd-section {
       opacity: 0;
@@ -166,8 +169,36 @@ button.c-button .c-button__icon {
 
 /*Modal styles*/
 .c-modal {
+  position: relative;
   padding: 35px 1rem;
-  background-color: rgba(50, 29, 90, 0.85); }
+  background: none; }
+  .c-modal:before, .c-modal:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%; }
+  .c-modal:before {
+    position: absolute;
+    top: 0;
+    height: 100px;
+    background: url("../img/top-modal.svg") no-repeat top center;
+    background-size: cover; }
+  .c-modal:after {
+    bottom: 0;
+    height: 78px;
+    background: url("../img/bottom-modal.svg") no-repeat bottom center;
+    background-size: cover; }
+  .c-modal__bg {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 178px);
+    background: -webkit-linear-gradient(top, rgba(217, 0, 233, 0.3) 0%, rgba(0, 87, 127, 0.3) 100%);
+    background: linear-gradient(to bottom, rgba(217, 0, 233, 0.3) 0%, rgba(0, 87, 127, 0.3) 100%); }
+  .c-modal__inner {
+    position: relative;
+    z-index: 10; }
   @media (min-width: 768px) {
     .c-modal {
       padding: 35px; } }
@@ -296,6 +327,7 @@ button.c-button .c-button__icon {
   .c-form__input {
     position: relative;
     margin-bottom: 1rem;
+    -webkit-transition: all 0.33s ease-in-out;
     transition: all 0.33s ease-in-out; }
     .c-form__input.lv-error:before, .c-form__input.lv-error:after {
       border-color: red; }
@@ -306,6 +338,7 @@ button.c-button .c-button__icon {
       width: 50%;
       height: calc(100% - 2px);
       border: 1px solid #F8961D;
+      -webkit-transition: all 0.33s ease-in-out;
       transition: all 0.33s ease-in-out; }
     .c-form__input:before {
       left: 0;
@@ -320,7 +353,8 @@ button.c-button .c-button__icon {
       .c-form__input.js-dirty input, .c-form__input.js-focus input {
         background: none; }
       .c-form__input.js-dirty label, .c-form__input.js-focus label {
-        transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1); }
+        -webkit-transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1);
+                transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1); }
     .c-form__input input {
       position: relative;
       z-index: 20;
@@ -330,6 +364,7 @@ button.c-button .c-button__icon {
       background: rgba(248, 150, 29, 0.2);
       border: none;
       color: #DA5596;
+      -webkit-transition: all 0.33s ease-in-out;
       transition: all 0.33s ease-in-out; }
     .c-form__input label {
       position: absolute;
@@ -338,7 +373,9 @@ button.c-button .c-button__icon {
       z-index: 10;
       width: 100%;
       color: #F8961D;
-      transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
+      -webkit-transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
+              transform: translate3d(-50%, 0, 0) scale3d(1, 1, 1);
+      -webkit-transition: all 0.33s ease-in-out;
       transition: all 0.33s ease-in-out; }
   .c-form__forgot {
     display: block;
@@ -399,13 +436,16 @@ button.c-button .c-button__icon {
       font-family: FontAwesome;
       line-height: 0.8;
       color: #F8961D;
+      -webkit-transition: all .2s;
       transition: all .2s; }
     .c-form__checkbox [type="checkbox"]:not(:checked) + label:after {
       opacity: 0;
-      transform: scale(0); }
+      -webkit-transform: scale(0);
+              transform: scale(0); }
     .c-form__checkbox [type="checkbox"]:checked + label:after {
       opacity: 1;
-      transform: scale(1); }
+      -webkit-transform: scale(1);
+              transform: scale(1); }
   .c-form__message {
     font-size: 14px;
     color: red; }
@@ -423,10 +463,15 @@ button.c-button .c-button__icon {
   background: url("../img/img-3.jpg") no-repeat center center;
   background-size: cover; }
 
+@media (min-width: 768px) {
+  .l-section--recompensas .l-section__safe-area {
+    padding: 2rem; } }
+
 .l-section__inner {
   height: 100vh;
   visibility: visible;
-  backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
   @media (min-width: 768px) {
     .l-section__inner {
       padding-top: 175px; } }
@@ -458,14 +503,17 @@ button.c-button .c-button__icon {
   height: 100vh;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-  transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+  -webkit-transition: all 0.30s ease-in-out;
   transition: all 0.30s ease-in-out; }
   @media (min-width: 1024px) {
     .l-sidenav {
       right: auto;
       left: 0;
       display: block;
-      transform: none; } }
+      -webkit-transform: none;
+              transform: none; } }
   .l-sidenav__close {
     position: absolute;
     top: 1rem;
@@ -509,8 +557,10 @@ button.c-button .c-button__icon {
   width: 100vw;
   padding: 1rem 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.33s ease-in-out;
   transition: all 0.33s ease-in-out;
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   /*mobile brand styles*/ }
   @media (min-width: 768px) {
     .l-header {
@@ -627,8 +677,10 @@ button.c-button .c-button__icon {
 
 /*wrapper content*/
 .l-wrapper {
+  -webkit-transition: all 0.33s ease-in-out;
   transition: all 0.33s ease-in-out;
-  transform: translate3d(0, 0, 0); }
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
 
 /*Full wrapper overlay*/
 .l-overlay {
@@ -639,9 +691,20 @@ button.c-button .c-button__icon {
   height: 100%;
   z-index: 100;
   background-color: rgba(50, 29, 90, 0.85);
-  animation-duration: 0.33s;
-  animation-name: fade-out;
-  animation-fill-mode: forwards; }
+  -webkit-animation-duration: 0.33s;
+          animation-duration: 0.33s;
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
 
 @keyframes fade-in {
   0% {
@@ -650,6 +713,14 @@ button.c-button .c-button__icon {
   100% {
     opacity: 1;
     visibility: visible; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
 
 @keyframes fade-out {
   0% {

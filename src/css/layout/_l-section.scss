@@ -8,6 +8,14 @@
         }
     }
 
+    &--recompensas {
+        .l-section__safe-area {
+            @include media(">=tablet") {
+                padding: 2rem;
+            }
+        }
+    }
+
     &__inner {
         height: $section_base_height;
         
