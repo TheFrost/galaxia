@@ -2,6 +2,7 @@
 /*Libs*/
 /*Tools*/
 /*Mixins*/
+/*Bar animation menu link active state*/
 /*Utils*/
 .u-imgresponsive {
   max-width: 100%;
@@ -368,7 +369,7 @@ button.c-button .c-button__icon {
       right: 0;
       border-left: none; }
     .c-form__input.js-dirty, .c-form__input.js-focus {
-      margin-bottom: 2rem; }
+      margin-bottom: 3rem; }
       .c-form__input.js-dirty:after, .c-form__input.js-dirty:before, .c-form__input.js-focus:after, .c-form__input.js-focus:before {
         width: calc(50% - 1rem); }
       .c-form__input.js-dirty input, .c-form__input.js-focus input {
@@ -376,6 +377,27 @@ button.c-button .c-button__icon {
       .c-form__input.js-dirty label, .c-form__input.js-focus label {
         -webkit-transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1);
                 transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1); }
+    .c-form__input-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 25;
+      display: block;
+      width: 2rem;
+      height: 100%;
+      padding-top: 0.3rem;
+      background-color: #F8961D; }
+      .c-form__input-icon .icon {
+        vertical-align: middle; }
+    .c-form__input select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 30;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer; }
     .c-form__input input {
       position: relative;
       z-index: 20;
@@ -411,6 +433,12 @@ button.c-button .c-button__icon {
   .c-form__legals {
     display: inline-block;
     margin-bottom: 1rem; }
+    .c-form__legals-link {
+      position: relative;
+      bottom: 2px;
+      display: inline-block;
+      font-size: calc(1rem - 4px);
+      color: #F8961D; }
   .c-form__legals, .c-form__captcha {
     vertical-align: top; }
     @media (min-width: 768px) {
@@ -552,6 +580,9 @@ button.c-button .c-button__icon {
     @media (min-width: 1024px) {
       .l-sidenav__head {
         display: block; } }
+    @media (min-width: 1367px) {
+      .l-sidenav__head {
+        margin-bottom: 5rem; } }
   .l-sidenav__brand {
     display: inline-block;
     margin-bottom: 2rem; }
@@ -560,14 +591,33 @@ button.c-button .c-button__icon {
     vertical-align: middle;
     text-align: left; }
     .l-sidenav__menu-link {
-      display: block;
+      position: relative;
+      display: inline-block;
       padding: 0.7rem 0;
       color: white; }
+      @media (min-width: 1367px) {
+        .l-sidenav__menu-link {
+          padding: 1.5rem 0; } }
       .l-sidenav__menu-link:hover {
         color: #F8961D; }
+      .l-sidenav__menu-link:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -0.5rem;
+        right: -0.5rem;
+        margin-top: 0.5px;
+        display: block;
+        height: 1px;
+        width: 0;
+        background-image: -webkit-linear-gradient(left, #FF0096, #00D3FA, #FF0096);
+        background-image: linear-gradient(to right, #FF0096, #00D3FA, #FF0096);
+        -webkit-transition: width 250ms;
+        transition: width 250ms; }
       .l-sidenav__menu-link.js-active {
-        color: #F8961D;
-        text-decoration: line-through; }
+        color: #F8961D; }
+        .l-sidenav__menu-link.js-active:after {
+          width: calc(100% + 1rem); }
 
 /*Header styles mobile*/
 .l-header {
@@ -792,6 +842,10 @@ button.c-button .c-button__icon {
     @media (min-width: 1025px) {
       .p-home:after {
         right: 20%; } }
+    @media (min-width: 1367px) {
+      .p-home:after {
+        width: 304px;
+        height: 489px; } }
   .p-home__art {
     position: absolute;
     top: 0;

@@ -74,7 +74,7 @@
                     <a href="#inicio" class="l-sidenav__menu-link">Inicio</a>
                 </li>
                 <li class="l-sidenav__menu-item">
-                    <a href="#productos" class="l-sidenav__menu-link">Productos participantes</a>
+                    <a href="#productos" class="l-sidenav__menu-link">Productos</a>
                 </li>
                 <li class="l-sidenav__menu-item">
                     <a href="#recompensas" class="l-sidenav__menu-link">Recompensas</a>
@@ -424,12 +424,34 @@
                         </div>
                     </div>
                     <div class="c-form__group c-form__group--doble u-clearfix">
-                        <div class="c-form__input">
-                            <input type="text" name="town">
+                        <div class="c-form__input c-form__input--select">
+                            <i class="c-form__input-icon c-form__input-icon--dropdown">
+                                <svg class="icon icon-arrows">
+                                    <use xlink:href="#icon-arrows"></use>
+                                </svg>
+                            </i>
+                            <select name="town">
+                                <option value="">Delegación/Municipio</option>
+                                <option value="Morelia">Morelia</option>
+                                <option value="Tarimbaro">Tarimbaro</option>
+                                <option value="Apatzingan">Apatzingan</option>
+                            </select>
+                            <input type="text">
                             <label for="town">Delegación/Municipio</label>
                         </div>
                         <div class="c-form__input">
-                            <input type="text" name="state">
+                            <i class="c-form__input-icon c-form__input-icon--dropdown">
+                                <svg class="icon icon-arrows">
+                                    <use xlink:href="#icon-arrows"></use>
+                                </svg>
+                            </i>
+                            <select name="state">
+                                <option value="">Estado</option>
+                                <option value="Morelia">Michoacán</option>
+                                <option value="Tarimbaro">México</option>
+                                <option value="Apatzingan">Guadalajara</option>
+                            </select>
+                            <input type="text">
                             <label for="state">Estado</label>
                         </div>
                     </div>
@@ -437,11 +459,13 @@
                         <div class="c-form__legals">
                             <div class="c-form__checkbox">
                                 <input type="checkbox" id="terms" name="terms">
-                                <label for="terms">Acepto términos y condiciones.</label>
+                                <label for="terms"></label>
+                                <a href="#" class="c-form__legals-link">Acepto términos y condiciones.</a>
                             </div>
                             <div class="c-form__checkbox">
                                 <input type="checkbox" id="policy" name="policy">
-                                <label for="policy">Acepto aviso de privacidad.</label>
+                                <label for="policy"></label>
+                                <a href="#" class="c-form__legals-link">Acepto aviso de privacidad.</a>
                             </div>
                         </div>
                         <div class="c-form__captcha">

@@ -1,3 +1,6 @@
+// responsive
+$breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px, monitor: 1366px);
+
 // base size
 $base_size: 16px;
 $second_size: 14px;
@@ -15,3 +18,10 @@ $base_color_delta:      #7F3494;
 $base_color_epsilon:    #321D5A;
 
 $facebook_color:  	    #3b5998;
+
+
+/*Bar animation menu link active state*/
+$color-pink: #FF0096;
+$color-turquoise:#00D3FA;
+$progress-width : 240px;
+$progress-height: 1px;

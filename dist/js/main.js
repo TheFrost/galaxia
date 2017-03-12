@@ -9,6 +9,7 @@
         var _body = $('body'),
             _window = $(window),
             _inputs = $('.c-form__input input'),
+            _selects = $('.c-form__input select');
             _menuTrigger = $('#menuTrigger'),
             _menuLinks = $('.l-sidenav__menu-link'),
             _closeMenu = $('#closeMenu'),
@@ -37,6 +38,7 @@
             _inputs.change(_onChangeInput);
             _inputs.focusin(_focusIn);
             _inputs.focusout(_focusOut);
+            _selects.change(_onChangeSelect);
 
             _menuTrigger.on('click', _toggleMenu);
             _closeMenu.on('click', _toggleMenu);
@@ -116,6 +118,15 @@
             } else {
                 parent.removeClass('js-dirty');
             }
+        }
+
+        function _onChangeSelect () {
+            var that = $(this),
+                siblingInput = that.siblings('input');
+
+            siblingInput.val(that.val());
+
+            siblingInput.trigger('change');
         }
 
         function _focusIn () {

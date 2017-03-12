@@ -25,6 +25,11 @@
         @include media(">desktop") {
             right: 20%;
         }
+
+        @include media(">monitor") {
+            width: 304px;
+            height: 489px;
+        }
     }
 
     &__art {

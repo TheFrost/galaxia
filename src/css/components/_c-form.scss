@@ -60,7 +60,7 @@
 
     &.js-dirty,
     &.js-focus {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
 
       &:after,
       &:before {
@@ -74,6 +74,37 @@
       label {
         transform: translate3d(-50%, calc(100% + 0.5rem), 0) scale3d(0.8, 0.8, 1);
       }
+    }
+
+    &-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 25;
+
+      display: block;
+      width: 2rem;
+      height: 100%;
+      padding-top: 0.3rem;
+
+      background-color: $base_color_beta;
+
+      .icon {
+        vertical-align: middle;
+      }
+    }
+
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 30;
+      
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+      cursor: pointer;
     }
 
     input {
@@ -126,6 +157,17 @@
   &__legals {
     display: inline-block;
     margin-bottom: 1rem;
+
+    &-link {
+      position: relative;
+      bottom: 2px;
+
+      display: inline-block;
+
+      font-size: calc(1rem - 4px);
+
+      color: $base_color_beta;
+    }
   }
 
   &__legals,
