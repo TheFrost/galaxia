@@ -896,3 +896,7 @@ button.c-button .c-button__icon {
       margin-bottom: 0.8rem; }
   .p-home .c-button {
     margin-top: 1rem; }
+
+.fx-glitch {
+  -webkit-filter: url("#glitch");
+          filter: url("#glitch"); }

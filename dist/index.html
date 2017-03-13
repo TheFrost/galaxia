@@ -1,287 +1,324 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Guardianes de la Galaxia</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Guardianes de la Galaxia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-        <!-- Libs -->
-        <link rel="stylesheet" href="libs/remodal/dist/remodal.css">
-        <link rel="stylesheet" href="libs/remodal/dist/remodal-default-theme.css">
-        <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css">
-        <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-        <!-- Custom -->
-        <link rel="stylesheet" href="css/main.css">
+    <!-- Libs -->
+    <link rel="stylesheet" href="libs/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="libs/remodal/dist/remodal-default-theme.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
 
-        <script src="libs/modernizr/modernizr.js"></script>
-    </head>
-    <body data-hijacking="on" data-animation="opacity">
-        <!--[if lt IE 8]>
+    <!-- Custom -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="libs/modernizr/modernizr.js"></script>
+</head>
+
+<body data-hijacking="on" data-animation="opacity">
+    <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        <!-- inline svg -->
-        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs>
-                <symbol id="icon-arrows" viewBox="0 0 44 32">
-                    <title>arrows</title>
-                    <path d="M14.86 31.83l15.92-15.92-15.92-15.91-0.86 0.86 15.054 15.054-15.054 15.056 0.86 0.86z"></path>
-                    <path d="M26.86 31.828l15.922-15.92-15.922-15.908-0.86 0.86 15.056 15.054-15.056 15.056 0.86 0.858z"></path>
-                    <path d="M0.86 31.828l15.922-15.92-15.922-15.908-0.86 0.86 15.054 15.054-15.054 15.056 0.86 0.858z"></path>
-                </symbol>
-            </defs>
-        </svg>
-        <!-- // end inline svg -->
-        
-        <!-- Layout -->
-        <div class="l-overlay" id="overlay"></div>
 
-        <!-- Scroll indicator -->
-        <div class="l-scrollsignal">
-            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-            <span><i class="fa fa-circle" aria-hidden="true"></i></span>
-            <span>Scroll</span>
-        </div>
-        <!-- // end Scroll indicator -->
+    <!-- inline svg -->
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-arrows" viewBox="0 0 44 32">
+                <title>arrows</title>
+                <path d="M14.86 31.83l15.92-15.92-15.92-15.91-0.86 0.86 15.054 15.054-15.054 15.056 0.86 0.86z"></path>
+                <path d="M26.86 31.828l15.922-15.92-15.922-15.908-0.86 0.86 15.056 15.054-15.056 15.056 0.86 0.858z"></path>
+                <path d="M0.86 31.828l15.922-15.92-15.922-15.908-0.86 0.86 15.054 15.054-15.054 15.056 0.86 0.858z"></path>
+            </symbol>
+        </defs>
+    </svg>
+    <!--glitch filter-->
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <filter id="glitch">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="1   0   0   0   0
+              0   0   0   0   0
+              0   0   0   0   0
+              0   0   0   1   0 " result="red" />
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0   0   0   0   0
+              0   1   0   0   0
+              0   0   0   0   0
+              0   0   0   1   0 " result="green" />
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0   0   0   0   0
+              0   0   0   0   0
+              0   0   1   0   0
+              0   0   0   1   0 " result="blue" />
+            <feOffset in="red" result="red" dx="-15">
+                <animate attributeName="dx" attributeType="XML" values="0; -3; 1; 0; 2; -1; 0;" dur="2s" repeatCount="indefinite" />
+            </feOffset>
+            <feOffset in="green" result="green" dx="-10">
+                <animate attributeName="dx" attributeType="XML" values="0; 2; -1; 1; 0; 1; 0;" dur="2.5s" repeatCount="indefinite" />
+            </feOffset>
+            <feOffset in="blue" result="blue" dx="-5">
+                <animate attributeName="dx" attributeType="XML" values="0; 1; 2; -4; 2; 6; 0;" dur="2s" repeatCount="indefinite" />
+            </feOffset>
+            </feOffset>
+            <feBlend in="red" in2="green" mode="screen" result="blend" />
+            <feBlend in="blend" in2="blue" mode="screen" result="blend" />
+            <feGaussianBlur in="blend" stdDeviation="1">
+                <animate attributeName="stdDeviation" attributeType="XML" values="0; 2; 1; 0.3; 2; 1; 0.5 ;3; 0" dur="5s" repeatCount="indefinite"
+                />
+            </feGaussianBlur>
+        </filter>
+    </svg>
+    <!-- // end inline svg -->
 
-        <!-- Sidenav -->
-        <nav class="l-sidenav">
-            <a href="#" class="l-sidenav__close" id="closeMenu"></a>
+    <!-- Layout -->
+    <div class="l-overlay" id="overlay"></div>
 
-            <header class="l-sidenav__head">
-                <figure class="l-sidenav__brand">
-                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
-                </figure>
-                <figure class="l-sidenav__brand">
-                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
-                </figure>
-            </header>
+    <!-- Scroll indicator -->
+    <div class="l-scrollsignal">
+        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+        <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+        <span>Scroll</span>
+    </div>
+    <!-- // end Scroll indicator -->
 
-            <ul class="l-sidenav__menu u-listnostyle">
-                <li class="l-sidenav__menu-item">
-                    <a href="#inicio" class="l-sidenav__menu-link l-anchor">Inicio</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#productos" class="l-sidenav__menu-link l-anchor">Productos</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#recompensas" class="l-sidenav__menu-link l-anchor">Recompensas</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Misión</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#" class="l-sidenav__menu-link">Ranking/Ganadores</a>
-                </li>
-                <li class="l-sidenav__menu-item">
-                    <a href="#copyright" class="l-sidenav__menu-link">Copyright</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- // end sidenav -->
+    <!-- Sidenav -->
+    <nav class="l-sidenav">
+        <a href="#" class="l-sidenav__close" id="closeMenu"></a>
 
-        <!-- Header -->
-        <header class="l-header u-clearfix">
-            <section class="l-header__brand u-table">
-                <figure class="l-header__brand-item u-table-cell">
-                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
-                </figure>
-                <figure class="l-header__brand-item u-table-cell u-align-center">
-                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
-                </figure>
-                <div class="l-header__menu u-table-cell u-align-right">
-                    <a href="#" class="l-header__menu-trigger" id="menuTrigger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
-            </section>
+        <header class="l-sidenav__head">
+            <figure class="l-sidenav__brand">
+                <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
+            </figure>
+            <figure class="l-sidenav__brand">
+                <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
+            </figure>
+        </header>
 
-            <section class="l-header__info u-clearfix u-pull-right">
-                <div class="l-header__info-profile u-pull-left">
-                    <!-- User profile info -->
-                    <!--<div class="l-header__user u-pull-left">
+        <ul class="l-sidenav__menu u-listnostyle">
+            <li class="l-sidenav__menu-item">
+                <a href="#inicio" class="l-sidenav__menu-link l-anchor">Inicio</a>
+            </li>
+            <li class="l-sidenav__menu-item">
+                <a href="#productos" class="l-sidenav__menu-link l-anchor">Productos</a>
+            </li>
+            <li class="l-sidenav__menu-item">
+                <a href="#recompensas" class="l-sidenav__menu-link l-anchor">Recompensas</a>
+            </li>
+            <li class="l-sidenav__menu-item">
+                <a href="#" class="l-sidenav__menu-link">Misión</a>
+            </li>
+            <li class="l-sidenav__menu-item">
+                <a href="#" class="l-sidenav__menu-link">Ranking/Ganadores</a>
+            </li>
+            <li class="l-sidenav__menu-item">
+                <a href="#copyright" class="l-sidenav__menu-link">Copyright</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- // end sidenav -->
+
+    <!-- Header -->
+    <header class="l-header u-clearfix">
+        <section class="l-header__brand u-table">
+            <figure class="l-header__brand-item u-table-cell">
+                <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
+            </figure>
+            <figure class="l-header__brand-item u-table-cell u-align-center">
+                <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
+            </figure>
+            <div class="l-header__menu u-table-cell u-align-right">
+                <a href="#" class="l-header__menu-trigger" id="menuTrigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </section>
+
+        <section class="l-header__info u-clearfix u-pull-right">
+            <div class="l-header__info-profile u-pull-left">
+                <!-- User profile info -->
+                <!--<div class="l-header__user u-pull-left">
                         <a href="#" class="l-header__user-name">
                             <span>AB</span>
                             <span class="l-header__user-shape">|</span>
                             <span>3455 PTS</span>
                         </a>
                     </div>-->
-                    <!-- // end User profile info -->
+                <!-- // end User profile info -->
 
-                    <!-- Login action -->
-                    <a href="#" data-remodal-target="login" class="l-header__login">Iniciar sesión</a>
-                    <!-- // end Login action -->
-                </div>
+                <!-- Login action -->
+                <a href="#" data-remodal-target="login" class="l-header__login">Iniciar sesión</a>
+                <!-- // end Login action -->
+            </div>
 
-                <form action="" class="l-header__codeform u-pull-right">
-                    <div class="l-header__codeform-group">
-                        <input type="text" placeholder="Ingresar Código">
-                        <button type="submit">
+            <form action="" class="l-header__codeform u-pull-right">
+                <div class="l-header__codeform-group">
+                    <input type="text" placeholder="Ingresar Código">
+                    <button type="submit">
                             <svg class="icon icon-arrows">
                                 <use xlink:href="#icon-arrows"></use>
                             </svg>
                         </button>
-                        <span class="l-header__codeform-message">Código incorrecto</span>
-                    </div>
-                </form>
-            </section>
-        </header>
-        <!-- // end Header -->
+                    <span class="l-header__codeform-message">Código incorrecto</span>
+                </div>
+            </form>
+        </section>
+    </header>
+    <!-- // end Header -->
 
-        <div class="l-wrapper">
-            <!-- Content -->
-            <section id="inicio" class="l-section u-clearfix cd-section visible">
-                <div class="l-section__inner">
-                    <div class="l-section__safe-area u-pull-right">
-                        <!-- Home -->
-                        <div class="p-home u-clearfix u-fullheight">
-                            <figure class="p-home__art u-pull-left u-fullheight"></figure>
-                            <div class="p-home__intro u-pull-right u-table u-fullheight">
-                                <div class="u-table-cell">
-                                    <div class="p-home__intro-inner">
-                                        <header class="p-home__intro-head">
-                                            <p class="p-home__intro-text">Con guardianes de la galaxia y doritos</p>
-                                            <figure class="p-home__intro-copyfig">
-                                                <img src="img/titles/gana_premios.png" alt="Gana premios fuera de este mundo" class="u-imgresponsive">
-                                            </figure>
-                                        </header>
-                                        <ul class="p-home__list">
-                                            <li class="p-home__list-item">Identifícate</li>
-                                            <li class="p-home__list-item">Ingresa tus códigos y juega</li>
-                                            <li class="p-home__list-item">Compite por llegar a la cima</li>
-                                            <li class="p-home__list-item">Los primeros XX lugares obtendrán <br/> un premio</li>
-                                        </ul>
-                                        <a href="#" class="c-button c-button--beta">
-                                            <span>Iniciar Misión</span>
-                                            <span class="c-button__icon">
+    <div class="l-wrapper">
+        <!-- Content -->
+        <section id="inicio" class="l-section u-clearfix cd-section visible">
+            <div class="l-section__inner">
+                <div class="l-section__safe-area u-pull-right">
+                    <!-- Home -->
+                    <div class="p-home u-clearfix u-fullheight">
+                        <figure class="p-home__art u-pull-left u-fullheight"></figure>
+                        <div class="p-home__intro u-pull-right u-table u-fullheight">
+                            <div class="u-table-cell">
+                                <div class="p-home__intro-inner">
+                                    <header class="p-home__intro-head">
+                                        <p class="p-home__intro-text">Con guardianes de la galaxia y doritos</p>
+                                        <figure class="p-home__intro-copyfig">
+                                            <img src="img/titles/gana_premios.png" alt="Gana premios fuera de este mundo" class="u-imgresponsive">
+                                        </figure>
+                                    </header>
+                                    <ul class="p-home__list">
+                                        <li class="p-home__list-item">Identifícate</li>
+                                        <li class="p-home__list-item">Ingresa tus códigos y juega</li>
+                                        <li class="p-home__list-item">Compite por llegar a la cima</li>
+                                        <li class="p-home__list-item">Los primeros XX lugares obtendrán <br/> un premio</li>
+                                    </ul>
+                                    <a href="#" class="c-button c-button--beta">
+                                        <span>Iniciar Misión</span>
+                                        <span class="c-button__icon">
                                                 <svg class="icon icon-arrows">
                                                     <use xlink:href="#icon-arrows"></use>
                                                 </svg>
                                             </span>
-                                        </a>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <!-- // end Home -->
                     </div>
+                    <!-- // end Home -->
                 </div>
-            </section>
-            <section id="productos" class="l-section u-clearfix cd-section">
-                <div class="l-section__inner">
-                    <div class="l-section__safe-area u-pull-right">
-                        <!-- Carousel -->
-                        <div class="c-presentation u-fullheight u-table">
-                            <div class="c-presentation__content u-table-cell">
-                                <header class="c-presentation__head">
-                                    <figure class="c-presentation__title">
-                                        <img src="img/titles/productos.png" alt="Productos participantes" class="u-imgresponsive">
-                                    </figure>
-                                </header>
-
-                                <figure class="c-presentation__composition">
-                                    <img src="img/products/bolsas_producto.png" alt="Productos participantes" class="u-imgresponsive">
+            </div>
+        </section>
+        <section id="productos" class="l-section u-clearfix cd-section">
+            <div class="l-section__inner">
+                <div class="l-section__safe-area u-pull-right">
+                    <!-- Carousel -->
+                    <div class="c-presentation u-fullheight u-table">
+                        <div class="c-presentation__content u-table-cell">
+                            <header class="c-presentation__head">
+                                <figure class="c-presentation__title">
+                                    <img src="img/titles/productos.png" alt="Productos participantes" class="u-imgresponsive">
                                 </figure>
+                            </header>
 
-                                <div class="c-presentation__carousel c-presentation__carousel--products owl-carousel" id="productsCarousel">
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_1_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_2_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_3_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_4_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_5_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_6_mobile.png" alt=""></figure>
-                                </div>
+                            <figure class="c-presentation__composition">
+                                <img src="img/products/bolsas_producto.png" alt="Productos participantes" class="u-imgresponsive">
+                            </figure>
 
-                                <footer class="c-presentation__footer">
-                                    <a href="#" class="c-button c-button--alpha">
-                                        <span>Iniciar Misión</span>
-                                        <span class="c-button__icon">
+                            <div class="c-presentation__carousel c-presentation__carousel--products owl-carousel" id="productsCarousel">
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_1_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_2_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_3_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_4_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_5_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_6_mobile.png" alt=""></figure>
+                            </div>
+
+                            <footer class="c-presentation__footer">
+                                <a href="#" class="c-button c-button--alpha">
+                                    <span>Iniciar Misión</span>
+                                    <span class="c-button__icon">
                                             <svg class="icon icon-arrows">
                                                 <use xlink:href="#icon-arrows"></use>
                                             </svg>
                                         </span>
-                                    </a>
-                                </footer>
-                            </div>
+                                </a>
+                            </footer>
                         </div>
-                        <!-- // end Carousel -->
                     </div>
+                    <!-- // end Carousel -->
                 </div>
-            </section>
-            <section id="recompensas" class="l-section l-section--recompensas u-clearfix cd-section">
-                <div class="l-section__inner">
-                    <div class="l-section__safe-area u-pull-right">
-                        <!-- Carousel -->
-                        <div class="c-presentation u-fullheight u-table">
-                            <div class="c-presentation__content u-table-cell">
-                                <header class="c-presentation__head">
-                                    <figure class="c-presentation__title">
-                                        <img src="img/titles/recompensas.png" alt="Productos participantes" class="u-imgresponsive">
-                                    </figure>
-                                </header>
+            </div>
+        </section>
+        <section id="recompensas" class="l-section l-section--recompensas u-clearfix cd-section">
+            <div class="l-section__inner">
+                <div class="l-section__safe-area u-pull-right">
+                    <!-- Carousel -->
+                    <div class="c-presentation u-fullheight u-table">
+                        <div class="c-presentation__content u-table-cell">
+                            <header class="c-presentation__head">
+                                <figure class="c-presentation__title">
+                                    <img src="img/titles/recompensas.png" alt="Productos participantes" class="u-imgresponsive">
+                                </figure>
+                            </header>
 
-                                <div class="c-presentation__carousel c-presentation__carousel--gifts owl-carousel" id="giftsCarousel">
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_1_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_2_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_3_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_4_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_5_mobile.png" alt=""></figure>
-                                    <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_6_mobile.png" alt=""></figure>
-                                </div>
+                            <div class="c-presentation__carousel c-presentation__carousel--gifts owl-carousel" id="giftsCarousel">
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_1_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_2_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_3_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_4_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_5_mobile.png" alt=""></figure>
+                                <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_6_mobile.png" alt=""></figure>
+                            </div>
 
-                                <footer class="c-presentation__footer">
-                                    <a href="#" class="c-button c-button--epsilon">
-                                        <span>Iniciar Misión</span>
-                                        <span class="c-button__icon">
+                            <footer class="c-presentation__footer">
+                                <a href="#" class="c-button c-button--epsilon">
+                                    <span>Iniciar Misión</span>
+                                    <span class="c-button__icon">
                                             <svg class="icon icon-arrows">
                                                 <use xlink:href="#icon-arrows"></use>
                                             </svg>
                                         </span>
-                                    </a>
-                                </footer>
-                            </div>
+                                </a>
+                            </footer>
                         </div>
-                        <!-- // end Carousel -->
                     </div>
+                    <!-- // end Carousel -->
                 </div>
-            </section>
-            <!-- // end Content -->
-        </div>
-        <!-- // end Layout -->
+            </div>
+        </section>
+        <!-- // end Content -->
+    </div>
+    <!-- // end Layout -->
 
 
-        <!-- Modal login -->
-        <div class="c-modal c-modal--small c-modal--login remodal" data-remodal-id="login">
-            <div class="c-modal__bg"></div>
-            <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
-            <div class="c-modal__inner">
-                <h1 class="c-modal__head">Identifícate</h1>
-                <a href="#" class="c-modal__social">Ingresar con facebook</a>
-                <hr>
-                <form action="" class="c-form">
-                    <div class="c-form__group c-form__group--doble u-clearfix">
-                        <div class="c-form__input lv-error">
-                            <input type="text" name="user">
-                            <label for="user">Usuario</label>
-                        </div>
-                        <div class="c-form__input lv-error">
-                            <input type="password" name="password">
-                            <label for="password">Contraseña</label>
-                        </div>
-
-                        <p class="c-form__message c-form__message--error">Usuario o contraseña incorrectos</p>
+    <!-- Modal login -->
+    <div class="c-modal c-modal--small c-modal--login remodal" data-remodal-id="login">
+        <div class="c-modal__bg"></div>
+        <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
+        <div class="c-modal__inner">
+            <h1 class="c-modal__head">Identifícate</h1>
+            <a href="#" class="c-modal__social">Ingresar con facebook</a>
+            <hr>
+            <form action="" class="c-form">
+                <div class="c-form__group c-form__group--doble u-clearfix">
+                    <div class="c-form__input lv-error">
+                        <input type="text" name="user">
+                        <label for="user">Usuario</label>
                     </div>
-                    <a href="#resetpass" class="c-form__forgot">¿Olvidaste tu contraseña?</a>
-                    <button type="submit" class="c-button c-button--beta">
+                    <div class="c-form__input lv-error">
+                        <input type="password" name="password">
+                        <label for="password">Contraseña</label>
+                    </div>
+
+                    <p class="c-form__message c-form__message--error">Usuario o contraseña incorrectos</p>
+                </div>
+                <a href="#resetpass" class="c-form__forgot">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="c-button c-button--beta">
                         <span>Iniciar sesión</span>
                         <span class="c-button__icon">
                             <svg class="icon icon-arrows">
@@ -289,36 +326,36 @@
                             </svg>
                         </span>
                     </button>
-                </form>
-                <hr>
-                <p class="c-modal__text">¿Aún no tienes una contraseña?</p>
-                <a href="#" class="c-button c-button--beta" data-remodal-target="register">
-                    <span>Regístrate aquí</span>
-                    <span class="c-button__icon">
+            </form>
+            <hr>
+            <p class="c-modal__text">¿Aún no tienes una contraseña?</p>
+            <a href="#" class="c-button c-button--beta" data-remodal-target="register">
+                <span>Regístrate aquí</span>
+                <span class="c-button__icon">
                         <svg class="icon icon-arrows">
                             <use xlink:href="#icon-arrows"></use>
                         </svg>
                     </span>
-                </a>
-            </div>
+            </a>
         </div>
-        <!-- // end Modal login -->
+    </div>
+    <!-- // end Modal login -->
 
-        <!-- Modal forgot password -->
-        <div class="c-modal c-modal--small remodal" data-remodal-id="resetpass">
-            <div class="c-modal__bg"></div>
-            <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
-            <div class="c-modal__inner">
-                <h1 class="c-modal__head">Recupera tu contraseña</h1>
-                <p class="c-modal__text">Por favor, confirma tu correo electrónico para ayudarte a configurar tu contraseña.</p>
-                <form action="" class="c-form">
-                    <div class="c-form__group u-clearfix">
-                        <div class="c-form__input">
-                            <input type="email" name="email">
-                            <label for="email">Correo electrónico</label>
-                        </div>
+    <!-- Modal forgot password -->
+    <div class="c-modal c-modal--small remodal" data-remodal-id="resetpass">
+        <div class="c-modal__bg"></div>
+        <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
+        <div class="c-modal__inner">
+            <h1 class="c-modal__head">Recupera tu contraseña</h1>
+            <p class="c-modal__text">Por favor, confirma tu correo electrónico para ayudarte a configurar tu contraseña.</p>
+            <form action="" class="c-form">
+                <div class="c-form__group u-clearfix">
+                    <div class="c-form__input">
+                        <input type="email" name="email">
+                        <label for="email">Correo electrónico</label>
                     </div>
-                    <button type="submit" class="c-button c-button--beta">
+                </div>
+                <button type="submit" class="c-button c-button--beta">
                         <span>Comprobar</span>
                         <span class="c-button__icon">
                             <svg class="icon icon-arrows">
@@ -326,33 +363,31 @@
                             </svg>
                         </span>
                     </button>
-                </form>
-            </div>
+            </form>
         </div>
-        <!-- // end Modal forgot password -->
+    </div>
+    <!-- // end Modal forgot password -->
 
-        <!-- Modal Code -->
-        <div class="c-modal c-modal--small c-modal--code remodal" data-remodal-id="code">
-            <div class="c-modal__bg"></div>
-            <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
-            <div class="c-modal__inner">
-                <h1 class="c-modal__head">Código válido</h1>
-                <p class="c-modal__points-copy">Obtuviste XXX puntos</p>
-                <p class="c-modal__text">
-                    Psssst... ¡Hey, tú! <br>
-                    ¿Quieres multiplicar tus puntos <br>
-                    con una misión?
-                </p>
-                <footer class="c-modal__footer">
-                    <a href="#" class="c-button c-button--epsilon" data-remodal-target="register">
-                        <span>Ni de broma</span>
-                        <span class="c-button__icon">
+    <!-- Modal Code -->
+    <div class="c-modal c-modal--small c-modal--code remodal" data-remodal-id="code">
+        <div class="c-modal__bg"></div>
+        <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
+        <div class="c-modal__inner">
+            <h1 class="c-modal__head">Código válido</h1>
+            <p class="c-modal__points-copy">Obtuviste XXX puntos</p>
+            <p class="c-modal__text">
+                Psssst... ¡Hey, tú! <br> ¿Quieres multiplicar tus puntos <br> con una misión?
+            </p>
+            <footer class="c-modal__footer">
+                <a href="#" class="c-button c-button--epsilon" data-remodal-target="register">
+                    <span>Ni de broma</span>
+                    <span class="c-button__icon">
                             <svg class="icon icon-arrows">
                                 <use xlink:href="#icon-arrows"></use>
                             </svg>
                         </span>
-                    </a>
-                    <a href="#" class="c-button c-button--beta" data-remodal-target="register">Ir a la misión
+                </a>
+                <a href="#" class="c-button c-button--beta" data-remodal-target="register">Ir a la misión
                         <span>Ir a la misión</span>
                         <span class="c-button__icon">
                             <svg class="icon icon-arrows">
@@ -360,111 +395,111 @@
                             </svg>
                         </span>
                     </a>
-                </footer>
-            </div>
+            </footer>
         </div>
-        <!-- // end Modal Code -->
+    </div>
+    <!-- // end Modal Code -->
 
-        <!-- Modal register -->
-        <div class="c-modal remodal" data-remodal-id="register">
-            <div class="c-modal__bg"></div>
-            <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
-            <div class="c-modal__inner">
-                <h1 class="c-modal__head">Registro</h1>
-                <p class="c-modal__text">Completa los siguientes datos. Todos los campos son obligatorios.</p>
-                <form action="" class="c-form">
-                    <div class="c-form__group u-clearfix">
-                        <div class="c-form__input">
-                            <input type="text" name="name">
-                            <label for="name">Nombre</label>
-                        </div>
+    <!-- Modal register -->
+    <div class="c-modal remodal" data-remodal-id="register">
+        <div class="c-modal__bg"></div>
+        <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
+        <div class="c-modal__inner">
+            <h1 class="c-modal__head">Registro</h1>
+            <p class="c-modal__text">Completa los siguientes datos. Todos los campos son obligatorios.</p>
+            <form action="" class="c-form">
+                <div class="c-form__group u-clearfix">
+                    <div class="c-form__input">
+                        <input type="text" name="name">
+                        <label for="name">Nombre</label>
                     </div>
-                    <div class="c-form__group c-form__group--doble u-clearfix">
-                        <div class="c-form__input">
-                            <input type="email" name="email">
-                            <label for="email">Correo Electrónico</label>
-                        </div>
-                        <div class="c-form__input">
-                            <input type="text" name="phone">
-                            <label for="phone">Teléfono</label>
-                        </div>
+                </div>
+                <div class="c-form__group c-form__group--doble u-clearfix">
+                    <div class="c-form__input">
+                        <input type="email" name="email">
+                        <label for="email">Correo Electrónico</label>
                     </div>
-                    <div class="c-form__group c-form__group--doble u-clearfix">
-                        <div class="c-form__input">
-                            <input type="password" name="password">
-                            <label for="password">Contraseña</label>
-                        </div>
-                        <div class="c-form__input">
-                            <input type="text" name="confpassword">
-                            <label for="confpassword">Confirmar Contraseña</label>
-                        </div>
+                    <div class="c-form__input">
+                        <input type="text" name="phone">
+                        <label for="phone">Teléfono</label>
                     </div>
-                    <div class="c-form__group u-clearfix">
-                        <div class="c-form__input">
-                            <input type="text" name="address">
-                            <label for="address">Calle y número</label>
-                        </div>
+                </div>
+                <div class="c-form__group c-form__group--doble u-clearfix">
+                    <div class="c-form__input">
+                        <input type="password" name="password">
+                        <label for="password">Contraseña</label>
                     </div>
-                    <div class="c-form__group c-form__group--doble u-clearfix">
-                        <div class="c-form__input">
-                            <input type="text" name="postcode">
-                            <label for="postcode">Código POstal</label>
-                        </div>
-                        <div class="c-form__input">
-                            <input type="text" name="suburb">
-                            <label for="suburb">Colonia</label>
-                        </div>
+                    <div class="c-form__input">
+                        <input type="text" name="confpassword">
+                        <label for="confpassword">Confirmar Contraseña</label>
                     </div>
-                    <div class="c-form__group c-form__group--doble u-clearfix">
-                        <div class="c-form__input c-form__input--select">
-                            <i class="c-form__input-icon c-form__input-icon--dropdown">
+                </div>
+                <div class="c-form__group u-clearfix">
+                    <div class="c-form__input">
+                        <input type="text" name="address">
+                        <label for="address">Calle y número</label>
+                    </div>
+                </div>
+                <div class="c-form__group c-form__group--doble u-clearfix">
+                    <div class="c-form__input">
+                        <input type="text" name="postcode">
+                        <label for="postcode">Código POstal</label>
+                    </div>
+                    <div class="c-form__input">
+                        <input type="text" name="suburb">
+                        <label for="suburb">Colonia</label>
+                    </div>
+                </div>
+                <div class="c-form__group c-form__group--doble u-clearfix">
+                    <div class="c-form__input c-form__input--select">
+                        <i class="c-form__input-icon c-form__input-icon--dropdown">
                                 <svg class="icon icon-arrows">
                                     <use xlink:href="#icon-arrows"></use>
                                 </svg>
                             </i>
-                            <select name="town">
+                        <select name="town">
                                 <option value="">Delegación/Municipio</option>
                                 <option value="Morelia">Morelia</option>
                                 <option value="Tarimbaro">Tarimbaro</option>
                                 <option value="Apatzingan">Apatzingan</option>
                             </select>
-                            <input type="text">
-                            <label for="town">Delegación/Municipio</label>
-                        </div>
-                        <div class="c-form__input">
-                            <i class="c-form__input-icon c-form__input-icon--dropdown">
+                        <input type="text">
+                        <label for="town">Delegación/Municipio</label>
+                    </div>
+                    <div class="c-form__input">
+                        <i class="c-form__input-icon c-form__input-icon--dropdown">
                                 <svg class="icon icon-arrows">
                                     <use xlink:href="#icon-arrows"></use>
                                 </svg>
                             </i>
-                            <select name="state">
+                        <select name="state">
                                 <option value="">Estado</option>
                                 <option value="Morelia">Michoacán</option>
                                 <option value="Tarimbaro">México</option>
                                 <option value="Apatzingan">Guadalajara</option>
                             </select>
-                            <input type="text">
-                            <label for="state">Estado</label>
+                        <input type="text">
+                        <label for="state">Estado</label>
+                    </div>
+                </div>
+                <footer class="c-form__conditions u-table">
+                    <div class="c-form__legals">
+                        <div class="c-form__checkbox">
+                            <input type="checkbox" id="terms" name="terms">
+                            <label for="terms"></label>
+                            <a href="#" class="c-form__legals-link">Acepto términos y condiciones.</a>
+                        </div>
+                        <div class="c-form__checkbox">
+                            <input type="checkbox" id="policy" name="policy">
+                            <label for="policy"></label>
+                            <a href="#" class="c-form__legals-link">Acepto aviso de privacidad.</a>
                         </div>
                     </div>
-                    <footer class="c-form__conditions u-table">
-                        <div class="c-form__legals">
-                            <div class="c-form__checkbox">
-                                <input type="checkbox" id="terms" name="terms">
-                                <label for="terms"></label>
-                                <a href="#" class="c-form__legals-link">Acepto términos y condiciones.</a>
-                            </div>
-                            <div class="c-form__checkbox">
-                                <input type="checkbox" id="policy" name="policy">
-                                <label for="policy"></label>
-                                <a href="#" class="c-form__legals-link">Acepto aviso de privacidad.</a>
-                            </div>
-                        </div>
-                        <div class="c-form__captcha">
-                            <div style="display: inline-block;width: 302px; height:76px; background:red"></div>
-                        </div>
-                    </footer>
-                    <button type="submit" class="c-button c-button--beta">
+                    <div class="c-form__captcha">
+                        <div style="display: inline-block;width: 302px; height:76px; background:red"></div>
+                    </div>
+                </footer>
+                <button type="submit" class="c-button c-button--beta">
                         <span>Enviar</span>
                         <span class="c-button__icon">
                             <svg class="icon icon-arrows">
@@ -472,33 +507,34 @@
                             </svg>
                         </span>
                     </button>
-                </form>
-            </div>
+            </form>
         </div>
-        <!-- // end Modal register -->
+    </div>
+    <!-- // end Modal register -->
 
-        <!-- Modal copyright -->
-        <div class="c-modal remodal" data-remodal-id="copyright">
-            <div class="c-modal__bg"></div>
-            <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
-            <div class="c-modal__inner">
-                <h1 class="c-modal__head">Copyright</h1>
-            </div>
+    <!-- Modal copyright -->
+    <div class="c-modal remodal" data-remodal-id="copyright">
+        <div class="c-modal__bg"></div>
+        <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
+        <div class="c-modal__inner">
+            <h1 class="c-modal__head">Copyright</h1>
         </div>
-        <!-- // end Modal copyright -->
+    </div>
+    <!-- // end Modal copyright -->
 
 
-        <!-- Libs -->
-        <script src="libs/jquery/dist/jquery.js"></script>
-        <script src="libs/velocity/velocity.min.js"></script>
-        <script src="libs/velocity/velocity.ui.min.js"></script>
-        <script src="libs/page-scroll/page-scroll.js"></script>
-        <script src="libs/remodal/dist/remodal.min.js"></script>
-        <script src="libs/underscore/underscore-min.js"></script>
-        <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+    <!-- Libs -->
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/velocity/velocity.min.js"></script>
+    <script src="libs/velocity/velocity.ui.min.js"></script>
+    <script src="libs/page-scroll/page-scroll.js"></script>
+    <script src="libs/remodal/dist/remodal.min.js"></script>
+    <script src="libs/underscore/underscore-min.js"></script>
+    <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
 
-        <!-- Custom -->
-        <script src="js/main.js"></script>
+    <!-- Custom -->
+    <script src="js/main.js"></script>
 
-    </body>
+</body>
+
 </html>
