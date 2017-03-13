@@ -2,6 +2,7 @@ jQuery(document).ready(function($){
 
 
 	/////////////////////////// CUSTOM CODE /////////////////////////
+	
 	let hash = window.location.hash.substring(1);
 
 	const hashMap = {
@@ -11,11 +12,6 @@ jQuery(document).ready(function($){
 	};
 
 	let hashIndex = hashMap[hash] || 1;
-
-
-	var anchorAvailable = $('.l-anchor');
-
-	anchorAvailable.on('click', goToSection);
 
 	/////////////////////////// END CUSTOM CODE /////////////////////////
 
@@ -37,6 +33,21 @@ jQuery(document).ready(function($){
 	//check the media query and bind corresponding events
 	var MQ = deviceType(),
 		bindToggle = false;
+
+	/////////////////////////// CUSTOM CODE /////////////////////////
+	
+	var anchorAvailable = $('.l-anchor');
+
+	anchorAvailable.on('click', function (evt) {
+		if (MQ == 'desktop') {
+			evt.preventDefault();
+			goToSection();
+		} else if (MQ == 'mobile') {
+			setMenuCurrentSection(actual);
+		}
+	});
+
+	/////////////////////////// END CUSTOM CODE /////////////////////////
 	
 	bindEvents(MQ, true);
 	
@@ -139,9 +150,9 @@ jQuery(document).ready(function($){
         bottomSection.children('div').velocity(animationBottom, 0);
 
 		//////////////////// CUSTOM CODE ////////////////////
-		// setMenuCurrentSection(actual);
+		setMenuCurrentSection(actual);
 		// anchorAvailable[actual-1].trigger('click');
-		if (actual === 1) { return;}
+		if (actual === 1) { return; }
 		$(anchorAvailable[actual-1]).trigger('click');
 	}
 
@@ -464,8 +475,6 @@ jQuery(document).ready(function($){
 	}
 
 	function goToSection(evt) {
-		typeof evt !== 'undefined' && evt.preventDefault();
-
 		var indexSection = anchorAvailable.index($(this));
 
 		// if this is current section stop funtion right here
