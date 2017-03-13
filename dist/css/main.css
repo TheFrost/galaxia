@@ -139,69 +139,61 @@ button {
   fill: currentColor; }
 
 /*control init state*/
-.fx-anim {
-  -webkit-transition: all 0.33s ease-out;
-  transition: all 0.33s ease-out; }
-
-.fx-fadeinright {
-  opacity: 0;
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0); }
-
-.fx-fadeindown {
-  opacity: 0;
-  -webkit-transform: translate3d(0, -16px, 0);
-          transform: translate3d(0, -16px, 0); }
+@media (min-width: 1025px) {
+  .fx-anim {
+    -webkit-transition: all 0.33s ease-out;
+    transition: all 0.33s ease-out; }
+  .fx-fadeinright {
+    opacity: 0;
+    -webkit-transform: translate3d(-16px, 0, 0);
+            transform: translate3d(-16px, 0, 0); }
+  .fx-fadeinleft {
+    opacity: 0;
+    -webkit-transform: translate3d(16px, 0, 0);
+            transform: translate3d(16px, 0, 0); }
+  .fx-fadeindown {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -16px, 0);
+            transform: translate3d(0, -16px, 0); }
+  .fx-fadeinup {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 16px, 0);
+            transform: translate3d(0, 16px, 0); }
+  .fx-fadein {
+    opacity: 0; } }
 
 /*layout animation control active*/
-.l-section.visible .fx-fadeinright {
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out; }
+@media (min-width: 1025px) {
+  .l-section.visible .fx-anim {
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; } }
 
-.l-section.visible .fx-fadeindown {
-  -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out; }
+.l-section.visible .fx-delay-1 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s; }
 
 .l-section.visible .fx-delay-2 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s; }
+
+.l-section.visible .fx-delay-3 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s; }
 
 /*animation register*/
-@-webkit-keyframes fadeInRight {
-  70% {
-    opacity: 0; }
-  100% {
+@-webkit-keyframes appear {
+  to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); } }
-@keyframes fadeInRight {
-  70% {
-    opacity: 0; }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
-
-@-webkit-keyframes fadeInDown {
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
-
-@keyframes fadeInDown {
-  100% {
+@keyframes appear {
+  to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); } }
@@ -889,16 +881,54 @@ button.c-button .c-button__icon {
     display: block;
     margin-top: 0.5rem;
     color: white; }
+    .l-scrollsignal span:first-child {
+      -webkit-animation: transportTopToBottom 1s infinite;
+              animation: transportTopToBottom 1s infinite; }
+    .l-scrollsignal span:nth-child(2) {
+      -webkit-animation: transportBottomToTop 1s infinite;
+              animation: transportBottomToTop 1s infinite; }
+    .l-scrollsignal span:nth-child(3) {
+      -webkit-animation: transportBottomToTop 1s infinite;
+              animation: transportBottomToTop 1s infinite; }
     .l-scrollsignal span:last-child {
       font-size: 16px;
       color: #01a8e2; }
+
+@-webkit-keyframes transportTopToBottom {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, calc(300% + 0.5rem), 0);
+            transform: translate3d(0, calc(300% + 0.5rem), 0); } }
+
+@keyframes transportTopToBottom {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, calc(300% + 0.5rem), 0);
+            transform: translate3d(0, calc(300% + 0.5rem), 0); } }
+
+@-webkit-keyframes transportBottomToTop {
+  100% {
+    -webkit-transform: translate3d(0, calc(-100% - 0.5rem), 0);
+            transform: translate3d(0, calc(-100% - 0.5rem), 0); } }
+
+@keyframes transportBottomToTop {
+  100% {
+    -webkit-transform: translate3d(0, calc(-100% - 0.5rem), 0);
+            transform: translate3d(0, calc(-100% - 0.5rem), 0); } }
 
 /*Pages*/
 /*Home styles*/
 .p-home {
   position: relative; }
-  .p-home:after {
-    content: '';
+  .p-home__art-second {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -909,13 +939,13 @@ button.c-button .c-button__icon {
     background: url("../img/groot_bebe.png") no-repeat center center;
     background-size: cover; }
     @media (min-width: 768px) {
-      .p-home:after {
+      .p-home__art-second {
         display: block; } }
     @media (min-width: 1025px) {
-      .p-home:after {
+      .p-home__art-second {
         right: 20%; } }
     @media (min-width: 1367px) {
-      .p-home:after {
+      .p-home__art-second {
         width: 304px;
         height: 489px; } }
   .p-home__art {

@@ -20,10 +20,42 @@
 
     color: white;
 
+    &:first-child {
+      animation: transportTopToBottom 1s infinite;
+    }
+
+    &:nth-child(2) {
+      animation: transportBottomToTop 1s infinite;
+    }
+
+    &:nth-child(3) {
+      animation: transportBottomToTop 1s infinite;
+    }
+
     &:last-child {
       font-size: $base_size;
 
       color: lighten($base_color_gamma, 10%);
     }
+  }
+}
+
+
+@keyframes transportTopToBottom {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, calc(300% + 0.5rem), 0);
+  }
+}
+
+@keyframes transportBottomToTop {
+  100% {
+    transform: translate3d(0, calc(-100% - 0.5rem), 0);
   }
 }

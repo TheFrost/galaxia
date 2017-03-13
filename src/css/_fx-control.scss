@@ -1,54 +1,61 @@
 /*control init state*/
-.fx-anim {
-    transition: all 0.33s ease-out;
-}
+@include media(">desktop") {
+    .fx-anim {
+        transition: all 0.33s ease-out;
+    }
 
-.fx-fadeinright {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-}
+    .fx-fadeinright {
+        opacity: 0;
+        transform: translate3d(-16px, 0, 0);
+    }
 
-.fx-fadeindown {
-    opacity: 0;
-    transform: translate3d(0, -16px, 0);
+    .fx-fadeinleft {
+        opacity: 0;
+        transform: translate3d(16px, 0, 0);
+    }
+
+    .fx-fadeindown {
+        opacity: 0;
+        transform: translate3d(0, -16px, 0);
+    }
+
+    .fx-fadeinup {
+        opacity: 0;
+        transform: translate3d(0, 16px, 0);
+    }
+
+    .fx-fadein {
+        opacity: 0;
+    }
 }
 
 /*layout animation control active*/
 .l-section.visible {
-    .fx-fadeinright {
-        animation-name: fadeInRight;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out;
-    }
-
-    .fx-fadeindown {
-        animation-name: fadeInDown;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out;
+    .fx-anim {
+        @include media(">desktop") {
+            animation-name: appear;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
     }
     
+    .fx-delay-1 {
+        animation-delay: 0.5s;
+    }
 
     .fx-delay-2 {
+        animation-delay: 0.7s;
+    }
+
+    .fx-delay-3 {
         animation-delay: 1s;
     }
 }
 
 /*animation register*/
-@keyframes fadeInRight {
-    70% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes fadeInDown {
-    100% {
+@keyframes appear {
+    to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }

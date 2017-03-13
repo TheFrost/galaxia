@@ -153,7 +153,7 @@
     var heroArt = $('.p-home__art');
     heroArt.addClass('fx-glitch');
     
-    wait(3000)
+    wait(1000)
         .then(function () {
             heroArt.removeClass('fx-glitch');
         });

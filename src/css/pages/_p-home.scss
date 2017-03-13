@@ -3,9 +3,7 @@
 .p-home {
     position: relative;
 
-    &:after {
-        content: '';
-
+    &__art-second {
         position: absolute;
         right: 0;
         bottom: 0;
