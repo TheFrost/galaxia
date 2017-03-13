@@ -1,5 +1,5 @@
-(function(window, document) {
-    
+(function (window, document) {
+
     // Instance
     var App = new App;
 
@@ -10,7 +10,7 @@
             _window = $(window),
             _inputs = $('.c-form__input input'),
             _selects = $('.c-form__input select');
-            _menuTrigger = $('#menuTrigger'),
+        _menuTrigger = $('#menuTrigger'),
             _menuLinks = $('.l-sidenav__menu-link'),
             _closeMenu = $('#closeMenu'),
             _overlay = $('#overlay'),
@@ -21,16 +21,16 @@
 
         ///////////////////// PUBLIC
 
-        function init () {
+        function init() {
             _bindEvents();
             _validateProductCarousel();
             _validateMenuLinksEventHandler();
             _initGiftsCarousel();
         }
 
-        function _bindEvents () {
+        function _bindEvents() {
 
-            _window.resize(function() {
+            _window.resize(function () {
                 _validateProductCarousel();
                 _validateMenuLinksEventHandler();
             });
@@ -48,7 +48,7 @@
 
         ///////////////////// PRIVATE
 
-        function _initGiftsCarousel () {
+        function _initGiftsCarousel() {
             _giftsCarousel.owlCarousel({
                 loop: true,
                 nav: true,
@@ -56,23 +56,23 @@
                     '<i class="fa fa-angle-left" aria-hidden="true"></i>',
                     '<i class="fa fa-angle-right" aria-hidden="true"></i>'
                 ],
-                responsiveClass:true,
+                responsiveClass: true,
                 responsiveBaseElement: 'body',
-                responsive:{
-                    0:{
-                        items:1
+                responsive: {
+                    0: {
+                        items: 1
                     },
-                    768:{
-                        items:3
+                    768: {
+                        items: 3
                     },
-                    1025:{
-                        items:5
+                    1025: {
+                        items: 5
                     }
                 }
             });
         }
 
-        function _validateProductCarousel () {
+        function _validateProductCarousel() {
             if (_window.innerWidth() < 768) {
                 _initProductCarousel();
             } else {
@@ -80,7 +80,7 @@
             }
         }
 
-        function _validateMenuLinksEventHandler () {
+        function _validateMenuLinksEventHandler() {
             if (_window.innerWidth() >= 1024) {
                 _menuLinks.off('click', _toggleMenu);
             } else {
@@ -88,11 +88,11 @@
             }
         }
 
-        function _killProductCarousel () {
+        function _killProductCarousel() {
             _productCarousel.owlCarousel('destroy');
         }
 
-        function _initProductCarousel () {
+        function _initProductCarousel() {
             _productCarousel.owlCarousel({
                 items: 1,
                 loop: true,
@@ -104,12 +104,12 @@
             });
         }
 
-        function _toggleMenu (evt) {
+        function _toggleMenu(evt) {
 
             _body.toggleClass('js-offcanvas-on');
         }
 
-        function _onChangeInput () {
+        function _onChangeInput() {
             var that = $(this),
                 parent = that.parent('.c-form__input');
 
@@ -120,7 +120,7 @@
             }
         }
 
-        function _onChangeSelect () {
+        function _onChangeSelect() {
             var that = $(this),
                 siblingInput = that.siblings('input');
 
@@ -129,15 +129,34 @@
             siblingInput.trigger('change');
         }
 
-        function _focusIn () {
+        function _focusIn() {
             $(this).parent('.c-form__input').addClass('js-focus');
         }
 
-        function _focusOut () {
+        function _focusOut() {
             $(this).parent('.c-form__input').removeClass('js-focus');
         }
 
     };
+
+
+    var wait = function (duration) {
+        if (duration === void 0) duration = 0;
+
+        var timer = function (resolve) {
+            setTimeout(resolve, duration);
+        };
+        var promise = new Promise(timer);
+        return promise;
+    };
+
+    var heroArt = $('.p-home__art');
+    heroArt.addClass('fx-glitch');
+    
+    wait(1000)
+        .then(function () {
+            heroArt.removeClass('fx-glitch');
+        });
 
 
 })(window, document);
