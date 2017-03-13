@@ -5,8 +5,6 @@ jQuery(document).ready(function($){
 
 	var anchorAvailable = $('.l-anchor');
 
-	anchorAvailable.on('click', goToSection);
-
 	/////////////////////////// END CUSTOM CODE /////////////////////////
 
 	//DOM elements
@@ -453,8 +451,12 @@ jQuery(document).ready(function($){
 	function goToSection(evt) {
 		evt.preventDefault();
 
-		var indexSection = anchorAvailable.index($(this)),
-			visibleSection = sectionsAvailable.filter('.visible'),
+		var indexSection = anchorAvailable.index($(this));
+
+		// if this is current section stop funtion right here
+		if (actual === (indexSection + 1)) { return true; }
+
+		var visibleSection = sectionsAvailable.filter('.visible'),
 			direction = indexSection > actual ? 'next' : 'prev',
 			animationIndex = direction === 'next' ? 1 : 2,
 			middleScroll = ( hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false,
