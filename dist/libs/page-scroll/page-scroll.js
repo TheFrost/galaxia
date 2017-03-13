@@ -2,8 +2,20 @@ jQuery(document).ready(function($){
 
 
 	/////////////////////////// CUSTOM CODE /////////////////////////
+	let hash = window.location.hash.substring(1);
+
+	const hashMap = {
+		'inicio' : 1,
+		'productos': 2,
+		'recompensas': 3
+	};
+
+	let hashIndex = hashMap[hash] || 1;
+
 
 	var anchorAvailable = $('.l-anchor');
+
+	anchorAvailable.on('click', goToSection);
 
 	/////////////////////////// END CUSTOM CODE /////////////////////////
 
@@ -19,9 +31,8 @@ jQuery(document).ready(function($){
 		animationType = $('body').data('animation'),
 		delta = 0,
         scrollThreshold = sectionsAvailable.length + 1,
-        actual = 1,
+        actual = hashIndex,
         animating = false;
-
 	
 	//check the media query and bind corresponding events
 	var MQ = deviceType(),
@@ -128,7 +139,10 @@ jQuery(document).ready(function($){
         bottomSection.children('div').velocity(animationBottom, 0);
 
 		//////////////////// CUSTOM CODE ////////////////////
-		setMenuCurrentSection(1);
+		// setMenuCurrentSection(actual);
+		// anchorAvailable[actual-1].trigger('click');
+		if (actual === 1) { return;}
+		$(anchorAvailable[actual-1]).trigger('click');
 	}
 
 	function scrollHijacking (event) {
@@ -446,10 +460,11 @@ jQuery(document).ready(function($){
 	function setMenuCurrentSection(actualIndex) {
 		anchorAvailable.removeClass('js-active');
 		$(anchorAvailable[actualIndex - 1]).addClass('js-active');
+		window.location.hash = $(anchorAvailable[actualIndex - 1]).attr('href');
 	}
 
 	function goToSection(evt) {
-		evt.preventDefault();
+		typeof evt !== 'undefined' && evt.preventDefault();
 
 		var indexSection = anchorAvailable.index($(this));
 
@@ -491,6 +506,9 @@ jQuery(document).ready(function($){
 		setMenuCurrentSection(actual);
 
 	}
+
+	
+	
 
 	//////////////////// END CUSTOM CODE ////////////////////
 
