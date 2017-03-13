@@ -19,9 +19,9 @@ html, body {
     overflow-x: hidden; 
     overflow-y: auto;
 
-    // @include media(">desktop") {
-    //     overflow: hidden;
-    // }
+    @include media(">desktop") {
+        overflow: hidden;
+    }
 
     &::before {
         content: 'mobile';

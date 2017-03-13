@@ -21,15 +21,12 @@
 
         <script src="libs/modernizr/modernizr.js"></script>
     </head>
-    <!-- data-hijacking="on" data-animation="opacity" -->
-    <body>
+    <body data-hijacking="on" data-animation="opacity">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
         <!-- inline svg -->
-        
-
         <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <symbol id="icon-arrows" viewBox="0 0 44 32">
@@ -40,11 +37,9 @@
                 </symbol>
             </defs>
         </svg>
-
         <!-- // end inline svg -->
-
+        
         <!-- Layout -->
-
         <div class="l-overlay" id="overlay"></div>
 
         <!-- Scroll indicator -->
@@ -71,13 +66,13 @@
 
             <ul class="l-sidenav__menu u-listnostyle">
                 <li class="l-sidenav__menu-item">
-                    <a href="#inicio" class="l-sidenav__menu-link">Inicio</a>
+                    <a href="#inicio" class="l-sidenav__menu-link l-anchor">Inicio</a>
                 </li>
                 <li class="l-sidenav__menu-item">
-                    <a href="#productos" class="l-sidenav__menu-link">Productos</a>
+                    <a href="#productos" class="l-sidenav__menu-link l-anchor">Productos</a>
                 </li>
                 <li class="l-sidenav__menu-item">
-                    <a href="#recompensas" class="l-sidenav__menu-link">Recompensas</a>
+                    <a href="#recompensas" class="l-sidenav__menu-link l-anchor">Recompensas</a>
                 </li>
                 <li class="l-sidenav__menu-item">
                     <a href="#" class="l-sidenav__menu-link">Misión</a>
@@ -109,8 +104,6 @@
                     </a>
                 </div>
             </section>
-
-            
 
             <section class="l-header__info u-clearfix u-pull-right">
                 <div class="l-header__info-profile u-pull-left">
@@ -263,7 +256,6 @@
             </section>
             <!-- // end Content -->
         </div>
-
         <!-- // end Layout -->
 
 
@@ -491,7 +483,6 @@
             <button data-remodal-action="close" class="remodal-close c-modal__close"></button>
             <div class="c-modal__inner">
                 <h1 class="c-modal__head">Copyright</h1>
-                
             </div>
         </div>
         <!-- // end Modal copyright -->
@@ -499,9 +490,9 @@
 
         <!-- Libs -->
         <script src="libs/jquery/dist/jquery.js"></script>
-        <!--<script src="libs/velocity/velocity.min.js"></script>
+        <script src="libs/velocity/velocity.min.js"></script>
         <script src="libs/velocity/velocity.ui.min.js"></script>
-        <script src="libs/page-scroll/page-scroll.js"></script>-->
+        <script src="libs/page-scroll/page-scroll.js"></script>
         <script src="libs/remodal/dist/remodal.min.js"></script>
         <script src="libs/underscore/underscore-min.js"></script>
         <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>

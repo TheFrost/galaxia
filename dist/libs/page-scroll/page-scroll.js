@@ -1,7 +1,16 @@
 jQuery(document).ready(function($){
 
+
+	/////////////////////////// CUSTOM CODE /////////////////////////
+
+	var anchorAvailable = $('.l-anchor');
+
+	anchorAvailable.on('click', goToSection);
+
+	/////////////////////////// END CUSTOM CODE /////////////////////////
+
 	//DOM elements
-    var sectionsAvailable = $('.cd-section'),
+    var sectionsAvailable = $('.l-section'),
     	verticalNav = $('.cd-vertical-nav'),
     	prevArrow = verticalNav.find('a.cd-prev'),
     	nextArrow = verticalNav.find('a.cd-next');
@@ -83,7 +92,8 @@ jQuery(document).ready(function($){
 			var animationValues = setSectionAnimation(offset, windowHeight, animationType);
 			
 			transformSection(actualBlock.children('div'), animationValues[0], animationValues[1], animationValues[2], animationValues[3], animationValues[4]);
-			( offset >= 0 && offset < windowHeight ) ? actualBlock.addClass('visible') : actualBlock.removeClass('visible');		
+			( offset >= 0 && offset < windowHeight ) ? actualBlock.addClass('visible') : actualBlock.removeClass('visible');
+
 		});
 		
 		checkNavigation();
@@ -118,6 +128,9 @@ jQuery(document).ready(function($){
 		});
         topSection.children('div').velocity(animationTop, 0);
         bottomSection.children('div').velocity(animationBottom, 0);
+
+		//////////////////// CUSTOM CODE ////////////////////
+		setMenuCurrentSection(1);
 	}
 
 	function scrollHijacking (event) {
@@ -152,6 +165,9 @@ jQuery(document).ready(function($){
             });
             
             actual = actual - 1;
+
+			//////////////////// CUSTOM CODE ////////////////////
+			setMenuCurrentSection(actual);
         }
 
         resetScroll();
@@ -176,6 +192,9 @@ jQuery(document).ready(function($){
             });
 
             actual = actual +1;
+
+			//////////////////// CUSTOM CODE ////////////////////
+			setMenuCurrentSection(actual);
         }
         resetScroll();
     }
@@ -422,6 +441,58 @@ jQuery(document).ready(function($){
 
 		return [translateY, scale, rotateX, opacity, boxShadowBlur]; 
 	}
+
+
+	//////////////////// CUSTOM CODE ////////////////////
+
+	function setMenuCurrentSection(actualIndex) {
+		anchorAvailable.removeClass('js-active');
+		$(anchorAvailable[actualIndex - 1]).addClass('js-active');
+	}
+
+	function goToSection(evt) {
+		evt.preventDefault();
+
+		var indexSection = anchorAvailable.index($(this)),
+			visibleSection = sectionsAvailable.filter('.visible'),
+			direction = indexSection > actual ? 'next' : 'prev',
+			animationIndex = direction === 'next' ? 1 : 2,
+			middleScroll = ( hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false,
+			animationParams = selectAnimation(animationType, middleScroll, direction);
+
+		animating = true;
+
+		visibleSection
+			.removeClass('visible')
+			.children('div')
+			.velocity(
+				animationParams[animationIndex], 
+				animationParams[3], 
+				animationParams[4] 
+			);
+			
+		$(sectionsAvailable[indexSection])
+			.addClass('visible')
+			.children('div')
+			.velocity(
+				animationParams[0], 
+				animationParams[3], 
+				animationParams[4], 
+				function(){
+					animating = false;
+					if( hijacking == 'off') $(window).on('scroll', scrollAnimation);
+				}
+			);
+
+		actual = indexSection + 1;
+
+		setMenuCurrentSection(actual);
+
+	}
+
+	//////////////////// END CUSTOM CODE ////////////////////
+
+
 });
 
 /* Custom effects registration - feature available in the Velocity UI pack */

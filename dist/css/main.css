@@ -74,6 +74,9 @@ html, body {
   -webkit-overflow-scrolling: touch !important;
   overflow-x: hidden;
   overflow-y: auto; }
+  @media (min-width: 1025px) {
+    html, body {
+      overflow: hidden; } }
   html::before, body::before {
     content: 'mobile';
     display: none; }
