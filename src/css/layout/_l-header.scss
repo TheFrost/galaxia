@@ -23,12 +23,14 @@
     background-color: transparent;
   }
 
-  /*mobile brand styles*/
-  &__brand {
+  &__nav {
     @include media(">=desktop") {
       display: none;
     }
+  }
 
+  /*mobile brand styles*/
+  &__brand {
     &-item {
       display: inline-block;
       vertical-align: middle;
@@ -74,12 +76,12 @@
       display: inline-block;
       width: 4rem;
       height: 4rem;
-      padding: 1rem;
+      padding: 1rem 0 1rem 2rem;
 
       span {
         position: absolute;
-        left: 1rem;
-        right: 1rem;
+        left: 2rem;
+        right: 0;
 
         display: block;
         height: 1px;
