@@ -112,6 +112,9 @@
     &-profile {
       padding-top: 11px;
       margin-right: 0.5rem;
+       @include media(">=tablet") {
+         margin-right: 1rem;
+       }
     }
   }
 

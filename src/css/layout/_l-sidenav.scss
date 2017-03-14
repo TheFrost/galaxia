@@ -7,8 +7,8 @@
 
     display: table;
     width: 100%;
-    max-width: 250px;
-    padding: 2rem;
+    max-width: 240px;
+    padding: 2rem 0 2rem 2rem;
     height: $section_base_height;
 
     text-align: center;
@@ -58,7 +58,12 @@
 
     &__brand {
         display: inline-block;
-        margin-bottom: 2rem;
+        &--doritos {
+            width: 128px;
+        }
+        &--guardianes {
+            width: 112px;
+        }
     }
 
     &__menu {

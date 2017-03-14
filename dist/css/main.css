@@ -611,8 +611,8 @@ button.c-button .c-button__icon {
   z-index: 100;
   display: table;
   width: 100%;
-  max-width: 250px;
-  padding: 2rem;
+  max-width: 240px;
+  padding: 2rem 0 2rem 2rem;
   height: 100vh;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
@@ -648,8 +648,11 @@ button.c-button .c-button__icon {
       .l-sidenav__head {
         margin-bottom: 5rem; } }
   .l-sidenav__brand {
-    display: inline-block;
-    margin-bottom: 2rem; }
+    display: inline-block; }
+    .l-sidenav__brand--doritos {
+      width: 128px; }
+    .l-sidenav__brand--guardianes {
+      width: 112px; }
   .l-sidenav__menu {
     display: table-cell;
     vertical-align: middle;
@@ -755,6 +758,9 @@ button.c-button .c-button__icon {
     .l-header__form-profile {
       padding-top: 11px;
       margin-right: 0.5rem; }
+      @media (min-width: 768px) {
+        .l-header__form-profile {
+          margin-right: 1rem; } }
   .l-header__user-name {
     color: currentColor; }
   .l-header__user-shape {
