@@ -666,8 +666,7 @@ button.c-button .c-button__icon {
           display: block;
           height: 1px;
           width: 0;
-          background-image: -webkit-linear-gradient(left, #FF0096, #00D3FA, #FF0096);
-          background-image: linear-gradient(to right, #FF0096, #00D3FA, #FF0096);
+          background-color: #F8961D;
           -webkit-transition: width 250ms;
           transition: width 250ms; }
 
