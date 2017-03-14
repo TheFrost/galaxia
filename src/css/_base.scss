@@ -12,12 +12,6 @@ html, body {
     letter-spacing: 1px;
 
     color: white;
-    background: url('../img/img-1.jpg') no-repeat center center;
-    background-size: cover;
-
-    -webkit-overflow-scrolling : touch !important;
-    overflow-x: hidden; 
-    overflow-y: auto;
 
     @include media(">desktop") {
         overflow: hidden;

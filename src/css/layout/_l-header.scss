@@ -108,7 +108,10 @@
 
     &-profile {
       padding-top: 11px;
-      margin-right: 1rem;
+      margin-right: 0.5rem;
+       @include media(">=tablet") {
+         margin-right: 1rem;
+       }
     }
   }
 
@@ -156,7 +159,7 @@
     }
 
     input {
-      width: 136px;
+      width: 128px;
       height: 40px;
       padding: 0.6rem 0.5rem;
 

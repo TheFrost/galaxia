@@ -35,14 +35,9 @@
         width: 100%;
         height: 100%;
 
-        overflow: hidden;
-
-        @include media(">=tablet") {
-            height: calc(100vh - 175px);
-        }
 
         @include media(">=desktop") {
-            width: calc(100% - 250px);
+            width: calc(100% - 240px);
             height: $section_base_height;
         }
     }
