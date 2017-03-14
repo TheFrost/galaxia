@@ -557,18 +557,6 @@ button.c-button .c-button__icon {
     color: red; }
 
 /*Layout*/
-.l-section:nth-of-type(1) .l-section__inner {
-  background: url("../img/img-1.jpg") no-repeat center center;
-  background-size: cover; }
-
-.l-section:nth-of-type(2) .l-section__inner {
-  background: url("../img/img-2.jpg") no-repeat center center;
-  background-size: cover; }
-
-.l-section:nth-of-type(3) .l-section__inner {
-  background: url("../img/img-3.jpg") no-repeat center center;
-  background-size: cover; }
-
 @media (min-width: 768px) {
   .l-section--recompensas .l-section__safe-area {
     padding: 2rem; } }
@@ -592,6 +580,13 @@ button.c-button .c-button__icon {
     .l-section__safe-area {
       width: calc(100% - 240px);
       height: 100vh; } }
+
+.l-view {
+  position: relative;
+  padding: 170px 16px 16px 16px; }
+  @media (min-width: 768px) {
+    .l-view {
+      padding: 122px 32px 32px 32px; } }
 
 /*Sidenav styles*/
 .l-sidenav {
