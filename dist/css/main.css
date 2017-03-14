@@ -685,13 +685,12 @@ button.c-button .c-button__icon {
 
 /*Header styles mobile*/
 .l-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 90;
-  width: 100vw;
+  width: 100%;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.33s ease-in-out;
   transition: all 0.33s ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
