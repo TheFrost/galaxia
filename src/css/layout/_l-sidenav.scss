@@ -99,6 +99,12 @@
 
             &:hover {
                 color: $base_color_beta;
+
+                span {
+                    &:after {
+                        width: calc(100% + 0.4rem);
+                    }
+                }
             }
 
             span {
@@ -120,6 +126,12 @@
 
                     transition: width 250ms;
                 }
+            }
+
+            .icon {
+                vertical-align: middle;
+                padding-bottom: 2px;
+                margin-left: 0.5rem;
             }
         }
     }

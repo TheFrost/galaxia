@@ -554,9 +554,20 @@ button.c-button .c-button__icon {
     color: red; }
 
 /*Layout*/
-@media (min-width: 768px) {
-  .l-section--recompensas .l-section__safe-area {
-    padding: 2rem; } }
+.l-section--inicio {
+  background: url("../img/img-1.jpg") no-repeat center center;
+  background-size: cover; }
+
+.l-section--productos {
+  background: url("../img/img-2.jpg") no-repeat center center;
+  background-size: cover; }
+
+.l-section--recompensas {
+  background: url("../img/img-3.jpg") no-repeat center center;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .l-section--recompensas .l-section__safe-area {
+      padding: 2rem; } }
 
 .l-section__inner {
   height: 100vh;
@@ -654,6 +665,8 @@ button.c-button .c-button__icon {
       color: white; }
       .l-sidenav__menu-link:hover {
         color: #F8961D; }
+        .l-sidenav__menu-link:hover span:after {
+          width: calc(100% + 0.4rem); }
       .l-sidenav__menu-link span {
         position: relative; }
         .l-sidenav__menu-link span:after {
@@ -669,6 +682,10 @@ button.c-button .c-button__icon {
           background-color: #F8961D;
           -webkit-transition: width 250ms;
           transition: width 250ms; }
+      .l-sidenav__menu-link .icon {
+        vertical-align: middle;
+        padding-bottom: 2px;
+        margin-left: 0.5rem; }
 
 /*Header styles mobile*/
 .l-header {

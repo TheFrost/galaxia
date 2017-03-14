@@ -1,11 +1,24 @@
 .l-section {
 
+    &--inicio {
+        background: url('../img/img-1.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    &--productos {
+        background: url('../img/img-2.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
     &--recompensas {
         .l-section__safe-area {
             @include media(">=tablet") {
                 padding: 2rem;
             }
         }
+
+        background: url('../img/img-3.jpg') no-repeat center center;
+        background-size: cover;
     }
 
     &__inner {
