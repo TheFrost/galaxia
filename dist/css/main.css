@@ -754,7 +754,7 @@ button.c-button .c-button__icon {
         width: auto; } }
     .l-header__form-profile {
       padding-top: 11px;
-      margin-right: 1rem; }
+      margin-right: 0.5rem; }
   .l-header__user-name {
     color: currentColor; }
   .l-header__user-shape {
@@ -779,7 +779,7 @@ button.c-button .c-button__icon {
     font-size: 14px;
     color: #0182AF; }
   .l-header__codeform input {
-    width: 136px;
+    width: 128px;
     height: 40px;
     padding: 0.6rem 0.5rem;
     font-size: 0.75rem;
