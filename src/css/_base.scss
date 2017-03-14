@@ -14,10 +14,6 @@ html, body {
     color: white;
     background-color: $base_color_epsilon;
 
-    @include media(">desktop") {
-        overflow: hidden;
-    }
-
     &::before {
         content: 'mobile';
         display: none;
