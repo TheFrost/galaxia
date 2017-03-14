@@ -93,12 +93,14 @@
         <a href="#" class="l-sidenav__close" id="closeMenu"></a>
 
         <header class="l-sidenav__head">
-            <figure class="l-sidenav__brand">
-                <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
-            </figure>
-            <figure class="l-sidenav__brand">
-                <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
-            </figure>
+            <div class="l-header__brand">
+                <figure class="l-header__brand-item l-header__brand-item--doritos">
+                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
+                </figure>
+                <figure class="l-header__brand-item l-header__brand-item--guardianes">
+                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
+                </figure>
+            </div>
         </header>
 
         <ul class="l-sidenav__menu u-listnostyle">
@@ -124,61 +126,63 @@
     </nav>
     <!-- // end sidenav -->
 
-    <!-- Header -->
-    <header class="l-header u-clearfix">
-
-        <section class="l-header__nav u-clearfix">
-            <section class="l-header__brand u-pull-left">
-                <figure class="l-header__brand-item l-header__brand-item--doritos">
-                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
-                </figure>
-                <figure class="l-header__brand-item l-header__brand-item--guardianes">
-                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
-                </figure>
-            </section>
-
-            <div class="l-header__menu u-pull-right">
-                <a href="#" class="l-header__menu-trigger" id="menuTrigger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-            </div>
-        </section>
-
-        <section class="l-header__form u-clearfix u-pull-right">
-            <div class="l-header__form-profile u-pull-left">
-                <!-- User profile info -->
-                <!--<div class="l-header__user u-pull-left">
-                        <a href="#" class="l-header__user-name">
-                            <span>AB</span>
-                            <span class="l-header__user-shape">|</span>
-                            <span>3455 PTS</span>
-                        </a>
-                    </div>-->
-                <!-- // end User profile info -->
-
-                <!-- Login action -->
-                <a href="#" data-remodal-target="login" class="l-header__login">Iniciar sesión</a>
-                <!-- // end Login action -->
-            </div>
-
-            <form action="" class="l-header__codeform u-pull-right">
-                <div class="l-header__codeform-group">
-                    <input type="text" placeholder="Ingresar Código">
-                    <button type="submit">
-                            <svg class="icon icon-arrows">
-                                <use xlink:href="#icon-arrows"></use>
-                            </svg>
-                        </button>
-                    <!--<span class="l-header__codeform-message">Código incorrecto</span>-->
-                </div>
-            </form>
-        </section>
-    </header>
-    <!-- // end Header -->
+    
 
     <div class="l-wrapper">
+        <!-- Header -->
+        <header class="l-header u-clearfix">
+
+            <section class="l-header__nav u-clearfix">
+                <div class="l-header__brand u-pull-left">
+                    <figure class="l-header__brand-item l-header__brand-item--doritos">
+                        <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
+                    </figure>
+                    <figure class="l-header__brand-item l-header__brand-item--guardianes">
+                        <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
+                    </figure>
+                </div>
+
+                <div class="l-header__menu u-pull-right">
+                    <a href="#" class="l-header__menu-trigger" id="menuTrigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="l-header__form u-clearfix u-pull-right">
+                <div class="l-header__form-profile u-pull-left">
+                    <!-- User profile info -->
+                    <!--<div class="l-header__user u-pull-left">
+                            <a href="#" class="l-header__user-name">
+                                <span>AB</span>
+                                <span class="l-header__user-shape">|</span>
+                                <span>3455 PTS</span>
+                            </a>
+                        </div>-->
+                    <!-- // end User profile info -->
+
+                    <!-- Login action -->
+                    <a href="#" data-remodal-target="login" class="l-header__login">Iniciar sesión</a>
+                    <!-- // end Login action -->
+                </div>
+
+                <form action="" class="l-header__codeform u-pull-right">
+                    <div class="l-header__codeform-group">
+                        <input type="text" placeholder="Ingresar Código">
+                        <button type="submit">
+                                <svg class="icon icon-arrows">
+                                    <use xlink:href="#icon-arrows"></use>
+                                </svg>
+                            </button>
+                        <!--<span class="l-header__codeform-message">Código incorrecto</span>-->
+                    </div>
+                </form>
+            </section>
+        </header>
+        <!-- // end Header -->
+
         <!-- Content -->
         <section id="inicio" class="l-section u-clearfix cd-section visible">
             <div class="l-section__inner">

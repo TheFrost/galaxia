@@ -91,9 +91,7 @@ html, body {
     html.js-offcanvas-on .l-overlay, body.js-offcanvas-on .l-overlay {
       -webkit-animation-name: fade-in;
               animation-name: fade-in; }
-    html.js-offcanvas-on .l-wrapper,
-    html.js-offcanvas-on .l-header, body.js-offcanvas-on .l-wrapper,
-    body.js-offcanvas-on .l-header {
+    html.js-offcanvas-on .l-wrapper, body.js-offcanvas-on .l-wrapper {
       -webkit-transform: translate3d(-250px, 0, 0);
               transform: translate3d(-250px, 0, 0); }
   @media (min-width: 1025px) {
@@ -651,8 +649,6 @@ button.c-button .c-button__icon {
     display: inline-block;
     margin-bottom: 2rem; }
   .l-sidenav__menu {
-    display: table-cell;
-    vertical-align: middle;
     text-align: left; }
     .l-sidenav__menu-link {
       position: relative;
@@ -691,10 +687,6 @@ button.c-button .c-button__icon {
   z-index: 90;
   width: 100%;
   padding: 1rem;
-  -webkit-transition: all 0.33s ease-in-out;
-  transition: all 0.33s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
   /*mobile brand styles*/ }
   @media (min-width: 768px) {
     .l-header {
@@ -733,20 +725,20 @@ button.c-button .c-button__icon {
     display: inline-block;
     width: 4rem;
     height: 4rem;
-    padding: 1rem 0 1rem 2rem; }
+    padding: 1.2rem 0 1.2rem 1.5rem; }
     .l-header__menu-trigger span {
       position: absolute;
-      left: 2rem;
+      left: 1.5rem;
       right: 0;
       display: block;
       height: 1px;
       background-color: #F8961D; }
       .l-header__menu-trigger span:nth-child(1) {
-        top: 1rem; }
+        top: 1.2rem; }
       .l-header__menu-trigger span:nth-child(2) {
         top: 50%; }
       .l-header__menu-trigger span:nth-child(3) {
-        bottom: 1rem; }
+        bottom: 1.2rem; }
   .l-header__form {
     padding: 0.5rem 0; }
     @media (min-width: 768px) {

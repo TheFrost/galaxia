@@ -10,7 +10,7 @@
             _window = $(window),
             _inputs = $('.c-form__input input'),
             _selects = $('.c-form__input select');
-        _menuTrigger = $('#menuTrigger'),
+            _menuTrigger = $('#menuTrigger'),
             _menuLinks = $('.l-sidenav__menu-link'),
             _closeMenu = $('#closeMenu'),
             _overlay = $('#overlay'),
