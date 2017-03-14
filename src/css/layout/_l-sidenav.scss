@@ -116,7 +116,7 @@
                     height: $progress-height;
                     width: 0;
 
-                    background-image: linear-gradient(to right, $color-pink, $color-turquoise, $color-pink);
+                    background-color: $base_color_beta;
 
                     transition: width 250ms;
                 }

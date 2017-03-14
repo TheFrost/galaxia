@@ -70,9 +70,6 @@ html, body {
   letter-spacing: 1px;
   color: white;
   background-color: #321D5A; }
-  @media (min-width: 1025px) {
-    html, body {
-      overflow: hidden; } }
   html::before, body::before {
     content: 'mobile';
     display: none; }
@@ -674,8 +671,7 @@ button.c-button .c-button__icon {
           display: block;
           height: 1px;
           width: 0;
-          background-image: -webkit-linear-gradient(left, #FF0096, #00D3FA, #FF0096);
-          background-image: linear-gradient(to right, #FF0096, #00D3FA, #FF0096);
+          background-color: #F8961D;
           -webkit-transition: width 250ms;
           transition: width 250ms; }
 

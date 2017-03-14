@@ -23,7 +23,7 @@
     <script src="libs/modernizr/modernizr.js"></script>
 </head>
 
-<body data-hijacking="on" data-animation="opacity">
+<body>
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -196,14 +196,14 @@
         <!-- // end Header -->
 
         <!-- Content -->
-        <section id="inicio" class="l-section u-clearfix cd-section visible">
+        <section id="inicio" class="l-section u-clearfix">
             <div class="l-section__inner">
                 <div class="l-section__safe-area u-pull-right">
                     <!-- Home -->
                     <div class="p-home u-clearfix u-fullheight">
-                        <figure class="p-home__art u-pull-left u-fullheight fx-anim fx-fadeinright fx-delay-1"></figure>
-                        <figure class="p-home__art-second fx-anim fx-fadeinleft fx-delay-3"></figure>
-                        <div class="p-home__intro u-pull-right u-table u-fullheight fx-anim fx-fadeindown fx-delay-2">
+                        <figure class="p-home__art u-pull-left u-fullheight"></figure>
+                        <figure class="p-home__art-second"></figure>
+                        <div class="p-home__intro u-pull-right u-table u-fullheight">
                             <div class="u-table-cell">
                                 <div class="p-home__intro-inner">
                                     <header class="p-home__intro-head">
@@ -234,19 +234,19 @@
                 </div>
             </div>
         </section>
-        <section id="productos" class="l-section u-clearfix cd-section">
+        <section id="productos" class="l-section u-clearfix">
             <div class="l-section__inner">
                 <div class="l-section__safe-area u-pull-right">
                     <!-- Carousel -->
                     <div class="c-presentation u-fullheight u-table">
                         <div class="c-presentation__content u-table-cell">
                             <header class="c-presentation__head">
-                                <figure class="c-presentation__title fx-anim fx-fadeindown fx-delay-1">
+                                <figure class="c-presentation__title">
                                     <img src="img/titles/productos.png" alt="Productos participantes" class="u-imgresponsive" srcset="img/titles/productos@2x.png 2x, img/titles/productos@3x.png 3x">
                                 </figure>
                             </header>
 
-                            <figure class="c-presentation__composition fx-anim fx-fadeinup fx-delay-2">
+                            <figure class="c-presentation__composition">
                                 <img src="img/products/bolsas_producto.png" alt="Productos participantes" class="u-imgresponsive">
                             </figure>
 
@@ -259,7 +259,7 @@
                                 <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_6_mobile.png" alt=""></figure>
                             </div>
 
-                            <footer class="c-presentation__footer fx-anim fx-fadeindown fx-delay-1">
+                            <footer class="c-presentation__footer">
                                 <a href="#" class="c-button c-button--alpha">
                                     <span>Iniciar Misión</span>
                                     <span class="c-button__icon">
@@ -275,19 +275,19 @@
                 </div>
             </div>
         </section>
-        <section id="recompensas" class="l-section l-section--recompensas u-clearfix cd-section">
+        <section id="recompensas" class="l-section l-section--recompensas u-clearfix">
             <div class="l-section__inner">
                 <div class="l-section__safe-area u-pull-right">
                     <!-- Carousel -->
                     <div class="c-presentation u-fullheight u-table">
                         <div class="c-presentation__content u-table-cell">
                             <header class="c-presentation__head">
-                                <figure class="c-presentation__title fx-anim fx-fadeindown fx-delay-1">
+                                <figure class="c-presentation__title">
                                     <img src="img/titles/recompensas.png" alt="Productos participantes" class="u-imgresponsive" srcset="img/titles/recompensas@2x.png 2x, img/titles/recompensas@3x.png 3x">
                                 </figure>
                             </header>
 
-                            <div class="c-presentation__carousel c-presentation__carousel--gifts owl-carousel fx-anim fx-fadeinup fx-delay-2" id="giftsCarousel">
+                            <div class="c-presentation__carousel c-presentation__carousel--gifts owl-carousel" id="giftsCarousel">
                                 <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_1_mobile.png" alt=""></figure>
                                 <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_2_mobile.png" alt=""></figure>
                                 <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_3_mobile.png" alt=""></figure>
@@ -296,7 +296,7 @@
                                 <figure class="c-presentation__carousel-item"><img src="img/products/bolsa_6_mobile.png" alt=""></figure>
                             </div>
 
-                            <footer class="c-presentation__footer fx-anim fx-fadeindown fx-delay-1">
+                            <footer class="c-presentation__footer">
                                 <a href="#" class="c-button c-button--epsilon">
                                     <span>Iniciar Misión</span>
                                     <span class="c-button__icon">
@@ -546,9 +546,6 @@
 
     <!-- Libs -->
     <script src="libs/jquery/dist/jquery.js"></script>
-    <script src="libs/velocity/velocity.min.js"></script>
-    <script src="libs/velocity/velocity.ui.min.js"></script>
-    <script src="libs/page-scroll/page-scroll.js"></script>
     <script src="libs/remodal/dist/remodal.min.js"></script>
     <script src="libs/underscore/underscore-min.js"></script>
     <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
