@@ -126,14 +126,18 @@
 
     <!-- Header -->
     <header class="l-header u-clearfix">
-        <section class="l-header__brand u-table">
-            <figure class="l-header__brand-item u-table-cell">
-                <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
-            </figure>
-            <figure class="l-header__brand-item u-table-cell u-align-center">
-                <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
-            </figure>
-            <div class="l-header__menu u-table-cell u-align-right">
+
+        <section class="l-header__nav u-clearfix">
+            <section class="l-header__brand u-pull-left">
+                <figure class="l-header__brand-item l-header__brand-item--doritos">
+                    <img src="img/doritos_logo.png" alt="Doritos" class="u-imgresponsive">
+                </figure>
+                <figure class="l-header__brand-item l-header__brand-item--guardianes">
+                    <img src="img/guardianes_logo.png" alt="Guardianes de la Galáxia" class="u-imgresponsive">
+                </figure>
+            </section>
+
+            <div class="l-header__menu u-pull-right">
                 <a href="#" class="l-header__menu-trigger" id="menuTrigger">
                     <span></span>
                     <span></span>
@@ -142,8 +146,8 @@
             </div>
         </section>
 
-        <section class="l-header__info u-clearfix u-pull-right">
-            <div class="l-header__info-profile u-pull-left">
+        <section class="l-header__form u-clearfix u-pull-right">
+            <div class="l-header__form-profile u-pull-left">
                 <!-- User profile info -->
                 <!--<div class="l-header__user u-pull-left">
                         <a href="#" class="l-header__user-name">
@@ -167,7 +171,7 @@
                                 <use xlink:href="#icon-arrows"></use>
                             </svg>
                         </button>
-                    <span class="l-header__codeform-message">Código incorrecto</span>
+                    <!--<span class="l-header__codeform-message">Código incorrecto</span>-->
                 </div>
             </form>
         </section>

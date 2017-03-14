@@ -6,7 +6,7 @@
   z-index: 90;
 
   width: 100vw;
-  padding: 1rem 1rem 2rem;
+  padding: 1rem;
 
   background-color: rgba(black, 0.5);
 
@@ -23,8 +23,87 @@
     background-color: transparent;
   }
 
-  &__info {
-    width: 100%;
+  /*mobile brand styles*/
+  &__brand {
+    @include media(">=desktop") {
+      display: none;
+    }
+
+    &-item {
+      display: inline-block;
+      vertical-align: middle;
+
+      &--doritos {
+        margin-right: 1rem;
+
+        @include media(">600px") {
+          margin-right: 2rem;
+        }
+
+        img {
+          width: 95px;
+          height: 80px;
+
+          @include media(">=tablet") {
+            width: 128px;
+            height: 108px;
+          }
+        }
+      }
+
+      &--guardianes {
+        img {
+          width: 80px;
+          height: 32px;
+
+          @include media(">=tablet") {
+            width: 112px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Mobile menu trigger
+  &__menu {
+    &-trigger {
+      position: relative;
+
+      display: inline-block;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+
+      span {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+
+        display: block;
+        height: 1px;
+
+        background-color: $base_color_beta;
+
+        &:nth-child(1) {
+          top: 1rem;
+        }
+
+        &:nth-child(2) {
+          top: 50%;
+        }
+
+        &:nth-child(3) {
+        bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  // Header form
+  &__form {
+    padding: 0.5rem 0;
 
     @include media(">=tablet") {
       width: auto;
@@ -63,7 +142,7 @@
       position: relative;
 
       display: inline-block;
-      padding-right: 2rem;
+      padding-right: 40px;
 
       border: 1px solid rgba($base_color_alpha, 0.85);
       background: rgba(black, 0.5);
@@ -80,7 +159,8 @@
     }
 
     input {
-      width: 130px;
+      width: 136px;
+      height: 40px;
       padding: 0.6rem 0.5rem;
 
       font-size: 0.75rem;
@@ -89,17 +169,12 @@
       background: none;
       color: $base_color_gamma;
 
-      @include media(">phone") {
-        width: 150px;
-
-        font-size: 0.9rem;
+      @include media(">=tablet") {
+        width: 160px;
       }
 
-      @include media(">=tablet") {
-        width: 200px;
-        padding: 0.6rem 1rem;
-
-        font-size: $base_size;
+      @include media(">=desktop") {
+        width: 168px;
       }
 
       &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -121,7 +196,7 @@
       top: 0;
       right: 0;
 
-      width: 2.5rem;
+      width: 40px;
       height: 100%;
       padding-top: 0.1rem;
 
@@ -135,63 +210,5 @@
         width: 2.5rem;
       }
     }
-  }
-
-  /*mobile brand styles*/
-  &__brand {
-    width: 100%;
-
-    @include media(">=desktop") {
-      display: none;
-    }
-
-    &-item {
-      img {
-        display: inline-block;
-        max-width: 200px;
-        max-height: 50px;
-
-        @include media(">=tablet") {
-          max-height: 80px;
-        }
-      }
-    }
-  }
-
-  &__menu {
-    &-trigger {
-      position: relative;
-
-      display: inline-block;
-      width: 40px;
-      height: 30px;
-
-      span {
-        position: absolute;
-        left: 0;
-
-        display: block;
-        height: 1px;
-        width: 100%;
-
-        background-color: $base_color_beta;
-
-        &:nth-child(1) {
-          top: 0;
-        }
-
-        &:nth-child(2) {
-          top: 50%;
-        }
-
-        &:nth-child(3) {
-        bottom: 0;
-        }
-      }
-    }
-  }
-
-  .u-table-cell {
-    width: calc(100% / 3);
   }
 }

@@ -690,7 +690,7 @@ button.c-button .c-button__icon {
   left: 0;
   z-index: 90;
   width: 100vw;
-  padding: 1rem 1rem 2rem;
+  padding: 1rem;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.33s ease-in-out;
   transition: all 0.33s ease-in-out;
@@ -704,12 +704,56 @@ button.c-button .c-button__icon {
     .l-header {
       padding: 2rem;
       background-color: transparent; } }
-  .l-header__info {
-    width: 100%; }
+  @media (min-width: 1024px) {
+    .l-header__brand {
+      display: none; } }
+  .l-header__brand-item {
+    display: inline-block;
+    vertical-align: middle; }
+    .l-header__brand-item--doritos {
+      margin-right: 1rem; }
+      @media (min-width: 601px) {
+        .l-header__brand-item--doritos {
+          margin-right: 2rem; } }
+      .l-header__brand-item--doritos img {
+        width: 95px;
+        height: 80px; }
+        @media (min-width: 768px) {
+          .l-header__brand-item--doritos img {
+            width: 128px;
+            height: 108px; } }
+    .l-header__brand-item--guardianes img {
+      width: 80px;
+      height: 32px; }
+      @media (min-width: 768px) {
+        .l-header__brand-item--guardianes img {
+          width: 112px;
+          height: 45px; } }
+  .l-header__menu-trigger {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem; }
+    .l-header__menu-trigger span {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      display: block;
+      height: 1px;
+      background-color: #F8961D; }
+      .l-header__menu-trigger span:nth-child(1) {
+        top: 1rem; }
+      .l-header__menu-trigger span:nth-child(2) {
+        top: 50%; }
+      .l-header__menu-trigger span:nth-child(3) {
+        bottom: 1rem; }
+  .l-header__form {
+    padding: 0.5rem 0; }
     @media (min-width: 768px) {
-      .l-header__info {
+      .l-header__form {
         width: auto; } }
-    .l-header__info-profile {
+    .l-header__form-profile {
       padding-top: 11px;
       margin-right: 1rem; }
   .l-header__user-name {
@@ -726,7 +770,7 @@ button.c-button .c-button__icon {
   .l-header__codeform-group {
     position: relative;
     display: inline-block;
-    padding-right: 2rem;
+    padding-right: 40px;
     border: 1px solid rgba(218, 85, 150, 0.85);
     background: rgba(0, 0, 0, 0.5); }
   .l-header__codeform-message {
@@ -736,21 +780,19 @@ button.c-button .c-button__icon {
     font-size: 14px;
     color: #0182AF; }
   .l-header__codeform input {
-    width: 130px;
+    width: 136px;
+    height: 40px;
     padding: 0.6rem 0.5rem;
     font-size: 0.75rem;
     border: none;
     background: none;
     color: #0182AF; }
-    @media (min-width: 321px) {
-      .l-header__codeform input {
-        width: 150px;
-        font-size: 0.9rem; } }
     @media (min-width: 768px) {
       .l-header__codeform input {
-        width: 200px;
-        padding: 0.6rem 1rem;
-        font-size: 16px; } }
+        width: 160px; } }
+    @media (min-width: 1024px) {
+      .l-header__codeform input {
+        width: 168px; } }
     .l-header__codeform input::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: #0182AF; }
@@ -767,7 +809,7 @@ button.c-button .c-button__icon {
     position: absolute;
     top: 0;
     right: 0;
-    width: 2.5rem;
+    width: 40px;
     height: 100%;
     padding-top: 0.1rem;
     background-color: rgba(218, 85, 150, 0.5);
@@ -777,38 +819,6 @@ button.c-button .c-button__icon {
     @media (min-width: 768px) {
       .l-header__codeform button {
         width: 2.5rem; } }
-  .l-header__brand {
-    width: 100%; }
-    @media (min-width: 1024px) {
-      .l-header__brand {
-        display: none; } }
-    .l-header__brand-item img {
-      display: inline-block;
-      max-width: 200px;
-      max-height: 50px; }
-      @media (min-width: 768px) {
-        .l-header__brand-item img {
-          max-height: 80px; } }
-  .l-header__menu-trigger {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 30px; }
-    .l-header__menu-trigger span {
-      position: absolute;
-      left: 0;
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: #F8961D; }
-      .l-header__menu-trigger span:nth-child(1) {
-        top: 0; }
-      .l-header__menu-trigger span:nth-child(2) {
-        top: 50%; }
-      .l-header__menu-trigger span:nth-child(3) {
-        bottom: 0; }
-  .l-header .u-table-cell {
-    width: calc(100% / 3); }
 
 /*wrapper content*/
 .l-wrapper {
