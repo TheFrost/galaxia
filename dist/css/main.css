@@ -705,7 +705,7 @@ button.c-button .c-button__icon {
       padding: 2rem;
       background-color: transparent; } }
   @media (min-width: 1024px) {
-    .l-header__brand {
+    .l-header__nav {
       display: none; } }
   .l-header__brand-item {
     display: inline-block;
@@ -734,11 +734,11 @@ button.c-button .c-button__icon {
     display: inline-block;
     width: 4rem;
     height: 4rem;
-    padding: 1rem; }
+    padding: 1rem 0 1rem 2rem; }
     .l-header__menu-trigger span {
       position: absolute;
-      left: 1rem;
-      right: 1rem;
+      left: 2rem;
+      right: 0;
       display: block;
       height: 1px;
       background-color: #F8961D; }
