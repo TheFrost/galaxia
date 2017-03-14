@@ -70,9 +70,6 @@ html, body {
   letter-spacing: 1px;
   color: white;
   background-color: #321D5A; }
-  @media (min-width: 1025px) {
-    html, body {
-      overflow: hidden; } }
   html::before, body::before {
     content: 'mobile';
     display: none; }
