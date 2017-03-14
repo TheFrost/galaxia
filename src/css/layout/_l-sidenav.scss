@@ -8,12 +8,10 @@
     display: table;
     width: 100%;
     max-width: 240px;
-    padding: 2rem 0 2rem 2rem;
+    padding: 4rem 0 4rem 2rem;
     height: $section_base_height;
 
-    text-align: center;
-
-    background-color: rgba(black, 0.5);
+    background-color: $base_color_epsilon;
 
     transform: translate3d(100%, 0, 0);
     transition: all 0.30s ease-in-out;
@@ -25,6 +23,7 @@
         display: block;
 
         transform: none;
+        background: rgba(black, 0.2);
     }
 
     &__close {
@@ -33,11 +32,11 @@
         right: 1rem;
 
         display: block;
-        width: 2rem;
-        height: 2rem;
+        width: 4rem;
+        height: 4rem;
 
-        background: url('../img/cerrar.svg') no-repeat center center;
-        background-size: cover;
+        background: url('../img/cerrar.svg') no-repeat center right;
+        background-size: 2rem 2rem;
 
         @include media(">=desktop") {
             display: none;
@@ -67,47 +66,59 @@
     }
 
     &__menu {
+        margin-top: 4rem;
         text-align: left;
 
-        &-link {
-            position: relative;
+        @include media(">=desktop") {
+            position: absolute;
+            left: 2rem;
+            bottom: 4rem;
+        }
 
-            display: inline-block;
-            padding: 0.7rem 0;
+        &-item {
+            &.js-active {
+                .l-sidenav__menu-link {
+                    color: $base_color_beta;
+
+                    span {
+                        &:after {
+                            width: calc(100% + 0.4rem);
+                        }
+                    }
+                }
+            }
+        }
+
+        &-link {
+            display: block;
+            height: 3rem;
+
+            line-height: 3rem;
 
             color: white;
-
-            @include media(">monitor") {
-                padding: 1.5rem 0;
-            }
 
             &:hover {
                 color: $base_color_beta;
             }
 
-            &:after {
-                content: '';
-
-                position: absolute;
-                top: 50%;
-                left: -0.5rem;
-                right: -0.5rem;
-                margin-top: $progress-height / 2;
-
-                display: block;
-                height: $progress-height;
-                width: 0;
-
-                background-image: linear-gradient(to right, $color-pink, $color-turquoise, $color-pink);
-
-                transition: width 250ms;
-            }
-
-            &.js-active {
-                color: $base_color_beta;
-
+            span {
+                position: relative;
                 &:after {
-                    width: calc(100% + 1rem);
+                    content: '';
+
+                    position: absolute;
+                    top: 50%;
+                    left: -0.2rem;
+                    right: -0.2rem;
+                    margin-top: $progress-height / 2;
+
+                    display: block;
+                    height: $progress-height;
+                    width: 0;
+
+                    background-image: linear-gradient(to right, $color-pink, $color-turquoise, $color-pink);
+
+                    transition: width 250ms;
                 }
             }
         }

@@ -68,7 +68,8 @@ html, body {
   font-family: UniversCondenced;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: white; }
+  color: white;
+  background-color: #321D5A; }
   @media (min-width: 1025px) {
     html, body {
       overflow: hidden; } }
@@ -87,8 +88,8 @@ html, body {
       -webkit-animation-name: fade-in;
               animation-name: fade-in; }
     html.js-offcanvas-on .l-wrapper, body.js-offcanvas-on .l-wrapper {
-      -webkit-transform: translate3d(-250px, 0, 0);
-              transform: translate3d(-250px, 0, 0); }
+      -webkit-transform: translate3d(-240px, 0, 0);
+              transform: translate3d(-240px, 0, 0); }
   @media (min-width: 1025px) {
     html[data-hijacking="on"] .cd-section, body[data-hijacking="on"] .cd-section {
       opacity: 0;
@@ -601,10 +602,9 @@ button.c-button .c-button__icon {
   display: table;
   width: 100%;
   max-width: 240px;
-  padding: 2rem 0 2rem 2rem;
+  padding: 4rem 0 4rem 2rem;
   height: 100vh;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #321D5A;
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
   -webkit-transition: all 0.30s ease-in-out;
@@ -615,16 +615,17 @@ button.c-button .c-button__icon {
       left: 0;
       display: block;
       -webkit-transform: none;
-              transform: none; } }
+              transform: none;
+      background: rgba(0, 0, 0, 0.2); } }
   .l-sidenav__close {
     position: absolute;
     top: 1rem;
     right: 1rem;
     display: block;
-    width: 2rem;
-    height: 2rem;
-    background: url("../img/cerrar.svg") no-repeat center center;
-    background-size: cover; }
+    width: 4rem;
+    height: 4rem;
+    background: url("../img/cerrar.svg") no-repeat center right;
+    background-size: 2rem 2rem; }
     @media (min-width: 1024px) {
       .l-sidenav__close {
         display: none; } }
@@ -643,35 +644,40 @@ button.c-button .c-button__icon {
     .l-sidenav__brand--guardianes {
       width: 112px; }
   .l-sidenav__menu {
+    margin-top: 4rem;
     text-align: left; }
+    @media (min-width: 1024px) {
+      .l-sidenav__menu {
+        position: absolute;
+        left: 2rem;
+        bottom: 4rem; } }
+    .l-sidenav__menu-item.js-active .l-sidenav__menu-link {
+      color: #F8961D; }
+      .l-sidenav__menu-item.js-active .l-sidenav__menu-link span:after {
+        width: calc(100% + 0.4rem); }
     .l-sidenav__menu-link {
-      position: relative;
-      display: inline-block;
-      padding: 0.7rem 0;
+      display: block;
+      height: 3rem;
+      line-height: 3rem;
       color: white; }
-      @media (min-width: 1367px) {
-        .l-sidenav__menu-link {
-          padding: 1.5rem 0; } }
       .l-sidenav__menu-link:hover {
         color: #F8961D; }
-      .l-sidenav__menu-link:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: -0.5rem;
-        right: -0.5rem;
-        margin-top: 0.5px;
-        display: block;
-        height: 1px;
-        width: 0;
-        background-image: -webkit-linear-gradient(left, #FF0096, #00D3FA, #FF0096);
-        background-image: linear-gradient(to right, #FF0096, #00D3FA, #FF0096);
-        -webkit-transition: width 250ms;
-        transition: width 250ms; }
-      .l-sidenav__menu-link.js-active {
-        color: #F8961D; }
-        .l-sidenav__menu-link.js-active:after {
-          width: calc(100% + 1rem); }
+      .l-sidenav__menu-link span {
+        position: relative; }
+        .l-sidenav__menu-link span:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: -0.2rem;
+          right: -0.2rem;
+          margin-top: 0.5px;
+          display: block;
+          height: 1px;
+          width: 0;
+          background-image: -webkit-linear-gradient(left, #FF0096, #00D3FA, #FF0096);
+          background-image: linear-gradient(to right, #FF0096, #00D3FA, #FF0096);
+          -webkit-transition: width 250ms;
+          transition: width 250ms; }
 
 /*Header styles mobile*/
 .l-header {
@@ -700,6 +706,10 @@ button.c-button .c-button__icon {
       @media (min-width: 601px) {
         .l-header__brand-item--doritos {
           margin-right: 2rem; } }
+      @media (min-width: 1024px) {
+        .l-header__brand-item--doritos {
+          margin-right: 0;
+          margin-bottom: 2rem; } }
       .l-header__brand-item--doritos img {
         width: 95px;
         height: 80px; }
@@ -810,8 +820,8 @@ button.c-button .c-button__icon {
 
 /*wrapper content*/
 .l-wrapper {
-  -webkit-transition: all 0.33s ease-in-out;
-  transition: all 0.33s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0); }
 

@@ -37,6 +37,11 @@
           margin-right: 2rem;
         }
 
+        @include media(">=desktop") {
+          margin-right: 0;
+          margin-bottom: 2rem;
+        }
+
         img {
           width: 95px;
           height: 80px;
