@@ -681,7 +681,9 @@ button.c-button .c-button__icon {
   /*mobile brand styles*/ }
   @media (min-width: 768px) {
     .l-header {
-      padding: 1rem 2rem 2rem; } }
+      padding: 1rem 2rem 2rem;
+      position: fixed;
+      top: 0; } }
   @media (min-width: 1024px) {
     .l-header {
       padding: 2rem;
